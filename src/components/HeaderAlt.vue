@@ -84,7 +84,7 @@ export default {
 </script>
 
 
-<style lang="css">
+<style scoped>
 #header {
     display: flex;
     height: 10rem;
