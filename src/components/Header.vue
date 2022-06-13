@@ -1,7 +1,7 @@
 <template>
     <div>
         <div id="header">
-            <router-link to="/"><img class="logo" src="@/assets/logo-2021-orange.png" alt="Vill Vill Vest Logo"></router-link>
+            <router-link @click="closeNav" to="/"><img class="logo" src="@/assets/logo-2021-orange.png" alt="Vill Vill Vest Logo"></router-link>
             <Hamburger @toggleHamburger="toggleNav" :navIsShowing="navIsShowing" />
         </div>
 
@@ -35,6 +35,12 @@ export default {
                 bodyEl.classList.remove("navOpen");
             }
         },
+        // Close nav when clicking on logo/Home button, enable scroll on body element
+        closeNav() {
+            this.navIsShowing = false;
+            const bodyEl = document.body;
+            bodyEl.classList.remove("navOpen");
+        }
     }
 }
 </script>
