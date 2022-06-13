@@ -1,18 +1,19 @@
 <template>
+  <Header />
   <router-view/>
   <Footer />
 </template>
 
 <script>
 // @ is an alias to /src
+import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
-// import Navigation from '@/components/Navigation.vue'
 
 export default {
   name: 'Home',
   components: {
-    Footer
-  }
+    Header, Footer
+  },
 }
 </script>
 
@@ -39,6 +40,9 @@ export default {
 }
 body {
   margin: 0;
+}
+body.navOpen {
+  overflow: hidden;
 }
 a {
   color: #2a2a2a;

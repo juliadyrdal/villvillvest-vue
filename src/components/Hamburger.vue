@@ -1,5 +1,5 @@
 <template>
-    <div @click="$emit('clickHamburger')" class="hamburger" :class="{open: navIsShowing}">
+    <div @click="$emit('toggleHamburger')" class="hamburger" :class="{open: navIsShowing}">
         <div>
             <h2>Meny</h2>
         </div>
@@ -15,9 +15,6 @@
 export default {
     name: 'Hamburger',
     props: ['navIsShowing'],
-    methods: {
-       
-    }
 }
 </script>
 

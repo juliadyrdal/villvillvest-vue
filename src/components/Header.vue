@@ -2,11 +2,11 @@
     <div>
         <div id="header">
             <router-link to="/"><img class="logo" src="@/assets/logo-2021-orange.png" alt="Vill Vill Vest Logo"></router-link>
-            <Hamburger @clickHamburger="toggleNav" :navIsShowing="navIsShowing" />
+            <Hamburger @toggleHamburger="toggleNav" :navIsShowing="navIsShowing" />
         </div>
 
     <!-- Refactor: separate components for nav and nav items -->
-        <Navigation v-if="navIsShowing" />
+        <Navigation @clickEvent="toggleNav" v-if="navIsShowing" />
         
     </div>
 </template>
@@ -26,8 +26,15 @@ export default {
     },
     methods: {
         toggleNav() {
-            this.navIsShowing = !this.navIsShowing
-        }
+            this.navIsShowing = !this.navIsShowing;
+            // Stops body element from scrolling while nav overlay is visible
+            const bodyEl = document.body;
+            if(this.navIsShowing) {
+                bodyEl.classList.add("navOpen");
+            } else {
+                bodyEl.classList.remove("navOpen");
+            }
+        },
     }
 }
 </script>

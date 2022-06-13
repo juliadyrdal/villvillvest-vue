@@ -1,6 +1,5 @@
 <template>
 <div>
-    <Header />
     <div class="page-width">
         <h1 class="heading u-padding-top-4"><span class="color-accent">Artister</span> 2021</h1>
         <p class="paragraph u-padding-bottom-2">Hvert år kommer noen av de beste og mest talentfulle artistene til Vill Vill Vest. Klikk deg inn og finn en ny favoritt! Vi oppdaterer fortløpende med nye artister frem mot festivalen.</p>

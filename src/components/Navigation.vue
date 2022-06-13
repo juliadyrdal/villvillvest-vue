@@ -4,8 +4,8 @@
             <img class="navigation__blob" src="../assets/blobb.png" alt="Abstrakt illustrasjon"> 
         </figure>
         <div class="navigation__container">
-            <NavCategory v-for="category in categoryList" :category="category" :key="category.title" />
-        </div>
+            <NavCategory v-for="category in categoryList" @clickLink="parentEmit" :category="category" :key="category.title" />
+        </div> 
          
     </nav>
 </template>
@@ -61,6 +61,11 @@ export default {
                 }
             ]
         }
+    },
+    methods: {
+        parentEmit() {
+            this.$emit('clickEvent')
+        }
     }
     
 }
@@ -88,7 +93,7 @@ export default {
     display: flex;
     gap: 10rem;
     margin-right: 10vw;
-    margin-top: 10vh;
+    margin-top: 14vh;
 }
 </style>
 

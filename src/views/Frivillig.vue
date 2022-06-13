@@ -1,5 +1,4 @@
 <template>
-    <Header />
    <div class="page-width">
         <h2 class="section-heading u-padding-top-4"><span class="color-accent">Frivillig</span></h2>
         <p class="paragraph">

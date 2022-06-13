@@ -1,5 +1,4 @@
 <template>
-    <Header />
     <section v-if="artist !== null" class="page-width">
     <h2 class="artistDetails__name">{{ artist.name }}</h2>
     <!-- Add moment.js date filter, find edition_day_id and stage_id on appmiral admin -->
