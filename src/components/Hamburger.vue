@@ -1,12 +1,12 @@
 <template>
-    <div @click="$emit('toggleHamburger')" class="hamburger" :class="{open: navIsShowing}">
+    <div @click="$emit('toggleHamburger')" class="hamburger" :class="{open: navIsShowing, 'hamburger--alt': currentRoute}">
         <div>
             <h2>Meny</h2>
         </div>
         <div class="hamburger__lines">
-            <div class="hamburger__line-1"></div>
-            <div class="hamburger__line-2"></div>
-            <div class="hamburger__line-3"></div>
+            <span class="hamburger__line-1" :class="{'hamburger__line--alt': currentRoute}"></span>
+            <span class="hamburger__line-2" :class="{'hamburger__line--alt': currentRoute}"></span>
+            <span class="hamburger__line-3" :class="{'hamburger__line--alt': currentRoute}"></span>
         </div>
     </div>
 </template>
@@ -15,6 +15,20 @@
 export default {
     name: 'Hamburger',
     props: ['navIsShowing'],
+    data() {
+        return {
+            
+        }
+    },
+    computed: {
+        currentRoute() {
+            if(this.$route.name === "Home") {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
 }
 </script>
 
@@ -25,6 +39,9 @@ export default {
     cursor: pointer; 
     color: #333;
     font-family: var(--font-family-display);   
+}
+.hamburger--alt {
+    color: #fff;
 }
 .hamburger h2 {
     text-transform: uppercase;
@@ -39,7 +56,7 @@ export default {
 }
 .hamburger__line-1, .hamburger__line-2, .hamburger__line-3 {
     position: absolute;
-    background-color: #333;
+    background: #333;
     height: 4px;
     width: 40px;
     -webkit-transform: rotate(0deg);
@@ -50,6 +67,9 @@ export default {
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
+}
+.hamburger__line--alt {
+    background: #fff;
 }
 .hamburger__line-1 {
     top: 0;

@@ -63,6 +63,8 @@ export default {
         }
     },
     methods: {
+        // Event emitted from child component -> 
+        // emit further to parent component
         parentEmit() {
             this.$emit('clickEvent')
         }
