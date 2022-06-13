@@ -22,7 +22,7 @@ export default {
     },
     computed: {
         currentRoute() {
-            if(this.$route.name === "Home") {
+            if(this.$route.name === "Home" && !this.navIsShowing) {
                 return true
             } else {
                 return false

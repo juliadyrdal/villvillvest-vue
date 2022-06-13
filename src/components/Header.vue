@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div id="header">
+        <div id="header" :class="{'header--alt': navIsShowing}">
             <router-link @click="closeNav" to="/"><img class="logo" src="@/assets/logo-2021-orange.png" alt="Vill Vill Vest Logo"></router-link>
             <Hamburger @toggleHamburger="toggleNav" :navIsShowing="navIsShowing" />
         </div>
@@ -52,6 +52,9 @@ export default {
     height: 10rem;
     z-index: 100;
     position: relative;
+}
+.header--alt {
+    background: #fff;
 }
 #header .logo {
     width: 10rem;
