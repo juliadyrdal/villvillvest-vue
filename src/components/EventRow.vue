@@ -26,6 +26,11 @@ export default {
         /* Create fallback for gap for older browsers - https://caniuse.com/flexbox-gap */
         gap: 2rem;
     }
+    @media (max-width: 50rem){
+        .eventRow__container {
+            flex-direction: column;
+        }
+    }
 </style>
 
 
