@@ -49,15 +49,19 @@ export default {
 <style scoped>
 #header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 10rem;
-    z-index: 100;
     position: relative;
+
+    padding-left: clamp(2rem, 3vw, 5rem);
+    padding-right: clamp(2rem, 3vw, 5rem);
 }
 .header--alt {
     background: #fff;
 }
 #header .logo {
-    width: 10rem;
+    width: clamp(7rem, 8vw, 10rem);
 }
 
 .nav-container {

@@ -1,7 +1,7 @@
 <template>
     <div @click="$emit('toggleHamburger')" class="hamburger" :class="{open: navIsShowing, 'hamburger--alt': currentRoute}">
-        <div>
-            <h2>Meny</h2>
+        <div class="hamburger__text">
+            <span>Meny</span>
         </div>
         <div class="hamburger__lines">
             <span class="hamburger__line-1" :class="{'hamburger__line--alt': currentRoute}"></span>
@@ -43,14 +43,14 @@ export default {
 .hamburger--alt {
     color: #fff;
 }
-.hamburger h2 {
+.hamburger span {
     text-transform: uppercase;
     font-size: 3rem;
     margin-right: 2rem;
 }
 .hamburger__lines {
     position: relative;
-    top: 3.2rem;
+    top: .6rem;
     width: 6rem;
     height: 4.5rem;
 }
@@ -97,6 +97,12 @@ export default {
     -o-transform: rotate(-135deg);
     transform: rotate(-135deg);
     top: 1rem;
+}
+
+@media only screen and (max-width: 60rem) {
+  .hamburger__text {
+    display: none;
+  }
 }
 </style>
 

@@ -25,15 +25,6 @@ export default {
   --font-family-medium:'Druk Wide Medium', sans-serif;
   --font-family-small: 'Helvetica Neue', 'Open Sans', sans-serif; 
 }
-
-#header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 6rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
 #app {
   font-family: var(--font-family-small);
   color: #333;
@@ -101,8 +92,8 @@ a {
 /* Utility Classes */
 /******************/
 .page-width {
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin-left: clamp(2rem, 3vw, 5rem);
+  margin-right: clamp(2rem, 3vw, 5rem);
 }
 .section-heading {
   font-size: 4.6rem;

@@ -2,18 +2,16 @@
     <section class="hero">
         <img src="../assets/hero.jpg" alt="Tacobitch" class="hero__image">
         <h1 class="hero__heading">{{ heading }}</h1> 
-        <HeroCTA />
     </section>
 </template>
 
 <script>
-import HeroCTA from '@/components/HeroCTA.vue'
 
 export default {
     name: 'Hero',
     props: ['heading'],
     components: {
-        HeroCTA
+
     }
 }
 </script>
@@ -29,11 +27,11 @@ export default {
     }
     .hero__heading {
         position: absolute;
-        top: 25%;
+        top: 45%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
         font-family: var(--font-family-display);
-        font-size: 9.4rem;
+        font-size: clamp(3rem, 7vw, 9.4rem);
         font-weight: 900;
         text-transform: uppercase;
         color: #EF6305;
