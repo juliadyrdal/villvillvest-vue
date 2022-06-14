@@ -5,18 +5,18 @@
         <!-- Refactor if directive statement -->
         <!-- Refactor: should be carousel? -->
         <article class="artistSection__EventRow" v-if="artists !== null">
-            <EventRow :artists="filteredArtists" />
+            <EventGrid :artists="filteredArtists" />
         </article>
         <router-link class="artistSection__link" to="/artists">Se alle artister &rarr;</router-link>
     </section>
 </template>
 
 <script>
-import EventRow from '@/components/EventRow.vue'
+import EventGrid from '@/components/EventGrid.vue'
 export default {
     name: 'ArtistSection',
     components: {
-       EventRow
+       EventGrid
     }, 
     data() {
         return {

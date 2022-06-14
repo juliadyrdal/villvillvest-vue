@@ -18,9 +18,14 @@ export default {
 
 <style scoped>
     .event-grid__container {
+        --min: 40rem;
+        --gap: 2rem;
+
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 2rem;
+        grid-gap: var(--gap);
+        /* min() with 100% prevents overflow
+        in extra narrow spaces */
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
     }
 </style>
 
