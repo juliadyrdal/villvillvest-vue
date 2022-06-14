@@ -20,18 +20,27 @@ export default {
     }, 
     data() {
         return {
-            artists: null
+            artists: null,
+            random1: null,
+            random2: null,
+            random3: null
 
         }
     },
     computed: {
+        // Create an array of 3 random artists from the total number fetched
         filteredArtists() {
-            return this.artists = [this.artists[1], this.artists[3], this.artists[4]]
+            return this.artists = [this.artists[this.random1], this.artists[this.random2], this.artists[this.random3]]
             
         }
     },
+    methods: {
+        getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+        }   
+    },
     created() {
-        fetch('https://app.appmiral.com/api/v6/events/villvillvest/editions/villvillvest2021/artists?child_edition=villvillvest2021festival', {
+        fetch('https://app.appmiral.com/api/v6/events/villvillvest/editions/villvillvest2021/artists?child_edition=villvillvest2021festival&max_per_page=60', {
             headers: {
                 'x-protect': process.env.VUE_APP_APPMIRAL_API_KEY
             }
@@ -39,6 +48,12 @@ export default {
         .then(res => res.json())
         .then(data => this.artists = data.data)
         .catch(err => console.log(err.message))
+    },
+    mounted() {
+        // Create 3 random numbers
+        this.random1 = this.getRandomInt(60);
+        this.random2 = this.getRandomInt(60);
+        this.random3 = this.getRandomInt(60);
     }
 }
 </script>
