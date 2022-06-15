@@ -17,7 +17,7 @@ export default {
     name: 'ArtistSection',
     components: {
        EventRow
-    }, 
+    },  
     data() {
         return {
             artists: null,

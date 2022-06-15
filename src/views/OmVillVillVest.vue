@@ -2,23 +2,38 @@
     <div class="page-width">
         <h2 class="section-heading u-padding-top-4"><span class="color-accent">Om</span> 
          Vill Vill Vest</h2>
-        <p class="paragraph">Siden 2016 har Vill Vill Vest løftet fram nye musikalske talenter for publikum og nasjonal- og internasjonal musikkbransje. Sammen med interesseorganisasjonen Brak inviterer vi til konferanse, seminarer og flotte konserter i Bergen sentrum. Artister som Sigrid, Fieh, Pom Poko, Boy Pablo, Kjartan Lauritzen og Dårlig Vane har hatt noen av sine første møter med publikum på en av Vill Vill Vests mange scener. I tillegg er festivalen en viktig møteplass mellom artister og bransjen, med alt fra lokale plateselskap til internasjonale selskaper.
-        <br><br>
-        Bli med på tre dager med musikk, fest og moro på en håndfull av byens flotte scener!</p>
+         <section v-for="page in pages" :key="page.id">
+            <article class="AboutVillVillVest__body" v-if="page.id === 424806" v-html="page.body"></article>
+        </section>
     </div>
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
 export default {
-    components: {
-    Header
-  }
+    data() {
+        return {
+            pages: null,
+        }
+    },
+    created() {
+        fetch('https://app.appmiral.com/api/v6/events/villvillvest/editions/villvillvest2021/pages?child_edition=villvillvest2021festival&max_per_page=60', {
+            headers: {
+                'x-protect': process.env.VUE_APP_APPMIRAL_API_KEY
+            }
+        })
+        .then(res => res.json())
+        .then(data => this.pages = data.data)
+        .catch(err => console.log(err.message))
+    },
 }
 </script>
 
-<style>
-
+<style scoped>
+.AboutVillVillVest__body {
+    font-size: 1.6rem;
+    width: 80vw;
+}
 </style>
+
 
 
