@@ -40,7 +40,7 @@ export default {
         }   
     },
     created() {
-        fetch('https://app.appmiral.com/api/v6/events/villvillvest/editions/villvillvest2021/artists?child_edition=villvillvest2021festival&max_per_page=60', {
+        fetch('https://app.appmiral.com/api/v6/events/villvillvest/editions/villvillvest2021/artists?child_edition=villvillvest2021festival&max_per_page=74', {
             headers: {
                 'x-protect': process.env.VUE_APP_APPMIRAL_API_KEY
             }
@@ -51,9 +51,9 @@ export default {
     },
     mounted() {
         // Create 3 random numbers
-        this.random1 = this.getRandomInt(60);
-        this.random2 = this.getRandomInt(60);
-        this.random3 = this.getRandomInt(60);
+        this.random1 = this.getRandomInt(74);
+        this.random2 = this.getRandomInt(74);
+        this.random3 = this.getRandomInt(74);
     }
 }
 </script>

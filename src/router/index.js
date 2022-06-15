@@ -1,13 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import Artists from '../views/Artists.vue'
-import ArtistDetails from '../views/ArtistDetails.vue'
-import OmVillVillVest from '../views/OmVillVillVest.vue'
-import KontaktOss from '../views/KontaktOss.vue'
-import UngDelegat from '../views/UngDelegat.vue'
-import Frivillig from '../views/Frivillig.vue'
-import Billetter from '../views/Billetter.vue'
-
 
 const routes = [
   {
@@ -26,38 +18,38 @@ const routes = [
   {
     path: '/artists',
     name: 'Artists',
-    component: Artists
+    component: () => import(/* webpackChunkName: "artists" */ '../views/Artists.vue')
   },
   {
     path: '/artist/:id',
     name: 'ArtistDetails',
-    component: ArtistDetails,
+    component: () => import(/* webpackChunkName: "artist-details" */ '../views/ArtistDetails.vue'),
     props: true
   },
   {
     path: '/om-vill-vill-vest',
     name: 'OmVillVillVest',
-    component: OmVillVillVest
+    component: () => import(/* webpackChunkName: "om-vill-vill-vest" */ '../views/OmVillVillVest.vue')
   },
   {
     path: '/kontakt-oss',
     name: 'KontaktOss',
-    component: KontaktOss
+    component: () => import(/* webpackChunkName: "kontakt-oss" */ '../views/KontaktOss.vue')
   },
   {
     path: '/ung-delegat',
     name: 'UngDelegat',
-    component: UngDelegat
+    component: () => import(/* webpackChunkName: "ung-delegat" */ '../views/UngDelegat.vue')
   },
   {
     path: '/frivillig',
     name: 'Frivillig',
-    component: Frivillig
+    component: () => import(/* webpackChunkName: "frivillig" */ '../views/Frivillig.vue')
   },
   {
     path: '/billetter',
     name: 'Billetter',
-    component: Billetter
+    component: () => import(/* webpackChunkName: "billetter" */ '../views/Billetter.vue')
   }
 ]
 

@@ -4,7 +4,7 @@
             <img class="navigation__blob" src="../assets/blobb.png" alt="Abstrakt illustrasjon"> 
         </figure>
         <div class="navigation__container">
-            <NavCategory v-for="category in categoryList" @clickLink="parentEmit" :category="category" :key="category.title" />
+            <NavCategory v-for="category in categoryList" @clickLink="parentEmit" :category="category" :key="category.heading" />
         </div> 
          
     </nav>
@@ -21,41 +21,41 @@ export default {
         return {
             categoryList: [
                 {
-                    "title": "Billetter",
+                    "heading": "Billetter",
                     "links": [
                         {
                             "link": "Billetter",
-                            "link-title": "Billetter"
+                            "title": "Billetter"
                         },
                         {
                             "link": "Frivillig",
-                            "link-title": "Bli frivillig"
+                            "title": "Bli frivillig"
                         }
                     ]
                 },
                 {
-                   "title": "Festival",
+                   "heading": "Festival",
                     "links": [
                         {
                             "link": "Artists",
-                            "link-title": "Artister 2022"
+                            "title": "Artister 2022"
                         },
                         {
                             "link": "UngDelegat",
-                            "link-title": "Ung Delegat"
+                            "title": "Ung Delegat"
                         }
                     ] 
                 },
                 {
-                   "title": "Om Vill Vill Vest",
+                   "heading": "Om Vill Vill Vest",
                     "links": [
                         {
                             "link": "OmVillVillVest",
-                            "link-title": "Om Vill Vill Vest"
+                            "title": "Om Vill Vill Vest"
                         },
                         {
                             "link": "KontaktOss",
-                            "link-title": "Kontakt Oss"
+                            "title": "Kontakt Oss"
                         }
                     ] 
                 }

@@ -1,12 +1,12 @@
 <template>
     <div>
         <div class="navCategory">
-            <h2 class="navCategory__heading">{{ category.title }}</h2>
+            <h2 class="navCategory__heading">{{ category.heading }}</h2>
             <ul class="navCategory__list">
                 <li v-for="entry in category.links" :key="entry.link">
                     <!-- Emit clickLink event to parent, to close nav when clicking a router link -->
                     <router-link @click="$emit('clickLink')" :to="{ name: entry.link }">
-                    <span>{{ entry.link }}</span>
+                    <span>{{ entry.title }}</span>
                     </router-link>
                 </li>
             </ul>
