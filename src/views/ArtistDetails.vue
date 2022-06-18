@@ -2,7 +2,7 @@
     <section v-if="artist !== null" class="page-width">
     <h2 class="artistDetails__name">{{ artist.name }}</h2>
     <!-- Add moment.js date filter, find edition_day_id and stage_id on appmiral admin -->
-    <p class="artistDetails__schedule"><span class="color-accent u-bold">Konsert</span> {{ artist.performances[0].edition_day_id }} | {{ artist.performances[0].start_time }} | {{ artist.performances[0].stage_id }}</p>
+    <p class="artistDetails__schedule"><span class="color-accent u-bold">Konsert</span> {{ artist.performances[0].edition_day_id }} | {{ formatDate(artist.performances[0].start_time) }} | {{ artist.performances[0].stage_id }}</p>
 
         <article class="artistDetails__media">
             <figure>
@@ -22,9 +22,7 @@
         </article>
         <article v-if="trackUrl" class="artistDetails__track-player">
             <iframe style="border-radius:12px" :src="musicEmbed + trackUrl" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-        </article>
-    
-        
+        </article>       
     </section>
 </template>
 
@@ -49,6 +47,10 @@ export default {
                     return this.trackUrl = this.artist.tracks[i].track_uri
                 }
             }
+        },
+        // Function to format the ISO date fetched from api
+        formatDate(date) {
+            return new Intl.DateTimeFormat('en-GB', { dateStyle: 'full', timeStyle: 'short' }).format(new Date(date))
         }
     },
     created() {
