@@ -1,6 +1,6 @@
 <template>
     <article class="eventRow__container">
-        <EventCard v-for="artist in artists" :artist="artist" :key="artist.id" />
+        <EventCard class="eventRow__card" v-for="artist in artists" :artist="artist" :key="artist.id" />
     </article>
 </template>
 
@@ -24,12 +24,18 @@ export default {
     .eventRow__container {
         display: flex;
         /* Create fallback for gap for older browsers - https://caniuse.com/flexbox-gap */
-        gap: 2rem;
+        /* gap: 2rem; */
     }
-    @media (max-width: 50rem){
+    .eventRow__container .eventRow__card:not(:last-child) {
+        margin-right: 2rem;
+    }
+    @media (max-width: 600px){
         .eventRow__container {
             flex-direction: column;
         }
+        .eventRow__container .eventRow__card:not(:last-child) {
+        margin-right: 0;
+    }
     }
 </style>
 

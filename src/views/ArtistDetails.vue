@@ -48,7 +48,7 @@ export default {
                 }
             }
         },
-        // Function to format the ISO date fetched from api
+        // Function to format the ISO date fetched from api - refactor to user dayjs or alternative, for wider browser support
         formatDate(date) {
             return new Intl.DateTimeFormat('en-GB', { dateStyle: 'full', timeStyle: 'short' }).format(new Date(date))
         }
@@ -68,6 +68,9 @@ export default {
 
 <style scoped>
 section {
+    /* Clamp Fallback for < Safari 13.1 */
+    margin-left: min(max(2rem, 3vw), 5rem);
+    margin-right: min(max(2rem, 3vw), 5rem);
     margin-left: clamp(2rem, 3vw, 5rem);
     margin-right: clamp(2rem, 3vw, 5rem);
 }

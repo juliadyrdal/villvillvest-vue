@@ -45,6 +45,9 @@ export default {
 <style scoped>
 section {
     margin-top: 8rem;
+    /* Clamp Fallback for < Safari 13.1 */
+    margin-left: min(max(2rem, 3vw), 5rem);
+    margin-right: min(max(2rem, 3vw), 5rem);
     margin-left: clamp(2rem, 3vw, 5rem);
     margin-right: clamp(2rem, 3vw, 5rem);
 }

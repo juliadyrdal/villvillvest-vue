@@ -52,6 +52,9 @@ export default {
 <style scoped>
 footer {
     margin-top: 8rem;
+    /* Clamp Fallback for < Safari 13.1 */
+    margin-left: min(max(2rem, 3vw), 5rem);
+    margin-right: min(max(2rem, 3vw), 5rem);
     margin-left: clamp(2rem, 3vw, 5rem);
     margin-right: clamp(2rem, 3vw, 5rem);
     display: grid;
@@ -100,26 +103,32 @@ footer button {
 }
 .Footer__social {
     display: flex;
-    grid-column-gap: 2rem;
     grid-area: social;
     padding-bottom: 1rem;
-    justify-content: end;
-    align-items: end;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 .Footer__social img {
     width: 3.5rem;
+}
+/* Refactor margin-right to use gap: 2rem; on flex parent if browser support */
+.Footer__social img:not(:last-child) {
+    margin-right: 2rem;
 }
 .Footer__social img:last-child {
     width: 4.5rem;
 }
 .Footer__contact {
     display: flex;
-    grid-column-gap: 10vw;
     grid-area: contact;
     margin: 8rem 0 0 0;
     width: 100%;
     padding: 0;
     list-style: none;
+}
+/* Refactor margin-right to use gap: 10vw; on flex parent if browser support */
+.Footer__contact li:not(:last-child) {
+    margin-right: 10vw;
 }
 .Footer__contact h2 {
     margin: 1.4rem 0 1rem 0;
@@ -141,12 +150,15 @@ footer hr {
 }
 .Footer__links {
     display: flex;
-    grid-column-gap: 2rem;
     grid-area: links;
     margin-top: 8rem;
     width: 100%;
     padding: 0;
     list-style-type: none;
+}
+/* Refactor margin-right to use gap: 2rem; on flex parent if browser support */
+.Footer__links li:not(:last-child) {
+    margin-right: 2rem;
 }
 .Footer__links li:last-child {
     margin-left: auto;
@@ -174,7 +186,7 @@ footer hr {
     .Footer__social {
         display: flex;
         justify-content: center;
-        align-items: end;
+        align-items: flex-end;
     }
 }    
 @media (max-width: 600px) {
@@ -183,16 +195,21 @@ footer hr {
     }
     .Footer__contact {
         flex-direction: column;
-        grid-row-gap: 2rem;
         margin: 4rem 0 0 0;
+    }
+    /* Refactor margin-right to use gap: 2rem; on flex parent if browser support */
+    .Footer__contact li:not(:last-child) {
+        margin-bottom: 2rem;
     }
     footer hr {
         width: 100%;
     }
     .Footer__links {
         flex-direction: column;
-        grid-row-gap: 1.6rem;
         margin-top: 4rem;
+    }
+    .Footer__links li:not(:last-child) {
+        margin-bottom: 1.6rem;
     }
  }
 </style>

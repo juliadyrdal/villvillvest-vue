@@ -26,6 +26,7 @@ export default {
         color: var(--signal-color);
         background: #F2EDED;
         cursor: pointer;
+        height: 100%;
     }
     .event__image {
         width: 100%;

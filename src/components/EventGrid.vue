@@ -1,7 +1,7 @@
 <template>
     <!-- Task: Add loader animation -->
     <div class="event-grid__container">
-        <EventCard v-for="artist in artists" :artist="artist" :key="artist.id" />
+        <EventCard class="event-grid__card" v-for="artist in artists" :artist="artist" :key="artist.id" />
     </div>
 </template>
 

@@ -53,7 +53,9 @@ export default {
     align-items: center;
     height: 10rem;
     position: relative;
-
+    /* Clamp Fallback for < Safari 13.1 */
+    padding-left: min(max(2rem, 3vw), 5rem);
+    padding-right: min(max(2rem, 3vw), 5rem);
     padding-left: clamp(2rem, 3vw, 5rem);
     padding-right: clamp(2rem, 3vw, 5rem);
 }
@@ -61,6 +63,8 @@ export default {
     background: #fff;
 }
 #header .logo {
+    /* Fallback for < Safari 13.1 */
+    width: min(max(7rem, 8vw), 10rem);
     width: clamp(7rem, 8vw, 10rem);
 }
 
