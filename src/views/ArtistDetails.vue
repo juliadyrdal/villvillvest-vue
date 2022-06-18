@@ -2,7 +2,7 @@
     <section v-if="artist !== null" class="page-width">
     <h2 class="artistDetails__name">{{ artist.name }}</h2>
     <!-- Add moment.js date filter, find edition_day_id and stage_id on appmiral admin -->
-    <p class="artistDetails__schedule"><span class="color-accent u-bold">Konsert</span> {{ artist.performances[0].edition_day_id }} | {{ formatDate(artist.performances[0].start_time) }} | {{ artist.performances[0].stage_id }}</p>
+    <p class="artistDetails__schedule"><span class="color-accent u-bold">Konsert </span> <!-- {{ artist.performances[0].edition_day_id }} | --> {{ formatDate(artist.performances[0].start_time) }} <!-- | {{ artist.performances[0].stage_id }}--> </p>
 
         <article class="artistDetails__media">
             <figure>
