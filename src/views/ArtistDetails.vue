@@ -29,12 +29,10 @@
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
 export default {
     name: 'ArtistDetails',
     props: ['id'],
     components: {
-    Header
   },
     data() {
         return {
@@ -67,12 +65,15 @@ export default {
 </script>
 
 <style scoped>
-
+section {
+    margin-left: clamp(2rem, 3vw, 5rem);
+    margin-right: clamp(2rem, 3vw, 5rem);
+}
 .artistDetails__name {
     font-family: var(--font-family-display);
     font-size: 7rem;
     text-align: left;
-    color: #EF6305;
+    color: var(--signal-color);
 }
 .artistDetails__schedule {
     font-size: 1.6rem;

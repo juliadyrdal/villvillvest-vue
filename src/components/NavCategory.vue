@@ -22,9 +22,12 @@ export default {
 </script>
 
 <style scoped>
+.navCategory:first-child {
+    margin-right: 5rem;
+}
 .navCategory__heading {
     padding-bottom: .5rem;
-    font-size: 2.2rem;
+    font-size: 3.2rem;
     font-family: var(--font-family-medium);
     color: var(--signal-color);
 }
@@ -36,7 +39,8 @@ export default {
     padding-bottom: 1.8rem;
 }
 .navCategory__list a {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    text-decoration: none;
 }
 .navCategory__list a:hover {
     text-decoration: underline;

@@ -1,27 +1,30 @@
 <template>
-<div>
-    <div class="page-width">
-        <h1 class="heading u-padding-top-4"><span class="color-accent">Artister</span> 2021</h1>
-        <p class="paragraph u-padding-bottom-2">Hvert år kommer noen av de beste og mest talentfulle artistene til Vill Vill Vest. Klikk deg inn og finn en ny favoritt! Vi oppdaterer fortløpende med nye artister frem mot festivalen.</p>
+    <section>
+        <HeadingMain>
+            Artister 2021
+        </HeadingMain>
+        <Paragraph>
+            Hvert år kommer noen av de beste og mest talentfulle artistene til Vill Vill Vest. Klikk deg inn og finn en ny favoritt! Vi oppdaterer fortløpende med nye artister frem mot festivalen.
+        </Paragraph>
         <EventGrid :artists="artists" />
-        </div>
-    </div>
+    </section>
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
+import HeadingMain from '@/components/HeadingMain.vue'
+import Paragraph from '@/components/Paragraph.vue'
 import EventGrid from '@/components/EventGrid.vue'
 
 export default {
     // TASK: Add isLoading boolean, add animation to EventGrid when true
     name: 'Artists',
     components: {
-    Header, EventGrid
+    HeadingMain, Paragraph, EventGrid
   },
      data() {
         return {
             artists: null,
-            info: null
+            info: null,
         }
     },
     mounted() {
@@ -39,8 +42,12 @@ export default {
 </script>
 
 
-<style lang="css">
-    
+<style scoped>
+section {
+    margin-top: 8rem;
+    margin-left: clamp(2rem, 3vw, 5rem);
+    margin-right: clamp(2rem, 3vw, 5rem);
+}
 </style>
 
 

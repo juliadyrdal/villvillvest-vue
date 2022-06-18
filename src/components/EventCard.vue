@@ -19,8 +19,11 @@ export default {
 </script>
 
 <style scoped>
+    a {
+        text-decoration: none;
+    }
     .event__card {
-        color: #EF6305;
+        color: var(--signal-color);
         background: #F2EDED;
         cursor: pointer;
     }

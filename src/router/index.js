@@ -8,17 +8,24 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  },
-  {
     path: '/artists',
     name: 'Artists',
     component: () => import(/* webpackChunkName: "artists" */ '../views/Artists.vue')
+  },
+  {
+    path: '/artists-schedule',
+    name: 'ArtistsSchedule',
+    component: () => import(/* webpackChunkName: "artists-schedule" */ '../views/ArtistsSchedule.vue')
+  },
+  {
+    path: '/speakers',
+    name: 'Speakers',
+    component: () => import(/* webpackChunkName: "speakers" */ '../views/Speakers.vue')
+  },
+  {
+    path: '/conference-schedule',
+    name: 'ConfSchedule',
+    component: () => import(/* webpackChunkName: "conference-schedule" */ '../views/ConfSchedule.vue')
   },
   {
     path: '/artist/:id',
@@ -27,9 +34,30 @@ const routes = [
     props: true
   },
   {
+    path: '/speaker/:id',
+    name: 'SpeakerDetails',
+    component: () => import(/* webpackChunkName: "speaker-details" */ '../views/SpeakerDetails.vue'),
+    props: true
+  },
+  {
+    path: '/delegate-tickets',
+    name: 'DelegateTickets',
+    component: () => import(/* webpackChunkName: "delegate-tickets" */ '../views/DelegateTickets.vue')
+  },
+  {
+    path: '/young-delegate',
+    name: 'YoungDelegate',
+    component: () => import(/* webpackChunkName: "young-delegate" */ '../views/YoungDelegate.vue')
+  },
+  {
     path: '/om-vill-vill-vest',
     name: 'OmVillVillVest',
     component: () => import(/* webpackChunkName: "om-vill-vill-vest" */ '../views/OmVillVillVest.vue')
+  },
+  {
+    path: '/our-partners',
+    name: 'OurPartners',
+    component: () => import(/* webpackChunkName: "our-partners" */ '../views/OurPartners.vue')
   },
   {
     path: '/kontakt-oss',
@@ -37,9 +65,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "kontakt-oss" */ '../views/KontaktOss.vue')
   },
   {
-    path: '/ung-delegat',
-    name: 'UngDelegat',
-    component: () => import(/* webpackChunkName: "ung-delegat" */ '../views/UngDelegat.vue')
+    path: '/venues-and-stages',
+    name: 'Venues',
+    component: () => import(/* webpackChunkName: "venues-and-stages" */ '../views/Venues.vue')
   },
   {
     path: '/frivillig',

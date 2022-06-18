@@ -4,7 +4,7 @@
     <PageDynamic :pageId="pageId">
         <!-- Add content for the HeadingMain component -->
         <template v-slot:heading>
-            About Vill Vill Vest
+            Young delegate
         </template>
         <template v-slot:staticContent>
             <!-- Static content goes here -->
@@ -26,4 +26,3 @@ export default {
     }
 }
 </script>
-

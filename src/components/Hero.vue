@@ -1,7 +1,7 @@
 <template>
     <section class="hero">
         <img src="../assets/hero.jpg" alt="Tacobitch" class="hero__image">
-        <h1 class="hero__heading">{{ heading }}</h1> 
+        <span class="hero__heading">{{ heading }}</span> 
     </section>
 </template>
 
@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style scoped>
     .hero {
         margin-top: -10rem;
     }
@@ -34,7 +34,7 @@ export default {
         font-size: clamp(3rem, 7vw, 9.4rem);
         font-weight: 900;
         text-transform: uppercase;
-        color: #EF6305;
+        color: var(--signal-color);
         text-align: center;
     }
 </style>

@@ -4,10 +4,10 @@
     <PageDynamic :pageId="pageId">
         <!-- Add content for the HeadingMain component -->
         <template v-slot:heading>
-            About Vill Vill Vest
+            Delegate tickets
         </template>
         <template v-slot:staticContent>
-            <!-- Static content goes here -->
+            <!-- Static content: ticket cards -->
         </template>
     </PageDynamic>
 </template>

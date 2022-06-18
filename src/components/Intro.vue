@@ -1,22 +1,37 @@
 <template>
-    <div class="page-width">
-        <h2 class="section-heading"><span class="color-accent">Vill Vill Vest</span> 
-         2021</h2>
-        <p class="paragraph">Vi inviterer deg til å ta del i den sjette utgaven av Vill Vill Vest. 9.- 11. september skal 60 av de beste og mest interessante nye norske artistene spille på musikalske strenger og hjertestrenger på Bergens kjente og kjære scener. Sikre deg din billett nå.</p>
-    </div>
+    <section>
+        <!-- <HeadingMain :title="title"/> -->
+        <HeadingMain>
+            Vill Vill Vest 2021
+        </HeadingMain>
+        <Paragraph>
+            Vi inviterer deg til å ta del i den sjette utgaven av Vill Vill Vest. 9.- 11. september skal 60 av de beste og mest interessante nye norske artistene spille på musikalske strenger og hjertestrenger på Bergens kjente og kjære scener. Sikre deg din billett nå.
+        </Paragraph>
+    </section>
 </template>
 
 <script>
+import HeadingMain from '@/components/HeadingMain.vue'
+import HeadingSection from '@/components/HeadingSection.vue'
+import Paragraph from '@/components/Paragraph.vue'
 export default {
+    components: {
+        HeadingMain, HeadingSection, Paragraph
+    },
     data() {
         return {
-
+            title: "Vill Vill Vest 2021"
         }
     }
 }
 </script>
 
-<style>
-
+<style scoped>
+    section {
+        margin-top: 8rem;
+        margin-left: clamp(2rem, 3vw, 5rem);
+        margin-right: clamp(2rem, 3vw, 5rem);
+    }
 </style>
+
 

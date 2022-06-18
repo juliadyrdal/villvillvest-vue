@@ -52,6 +52,8 @@ export default {
 <style scoped>
 footer {
     margin-top: 8rem;
+    margin-left: clamp(2rem, 3vw, 5rem);
+    margin-right: clamp(2rem, 3vw, 5rem);
     display: grid;
     grid-template-areas: "form social"
                          "contact contact"

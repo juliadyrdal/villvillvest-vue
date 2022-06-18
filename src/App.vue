@@ -18,7 +18,15 @@ export default {
 </script>
 
 <style lang="css">
+/************************************/
+/************************************/
+         /* GLOBAL STYLES */
+/************************************/
+/************************************/
+
+/******************/
 /* Variables */
+/******************/
 :root {
   --signal-color: #EF6305;
   --font-family-display:'Druk Wide Super', sans-serif;
@@ -27,6 +35,7 @@ export default {
 }
 #app {
   font-family: var(--font-family-small);
+  font-size: 1.6rem;
   color: #333;
 }
 body {
@@ -37,7 +46,9 @@ body.navOpen {
 }
 a {
   color: #2a2a2a;
-  text-decoration: none;
+}
+a:hover {
+  text-decoration-color: var(--signal-color);
 }
 
 
@@ -46,15 +57,15 @@ a {
 /******************/
 
 /*
-        This font software is the property of Commercial Type.
+This font software is the property of Commercial Type.
 
-        You may not modify the font software, use it on another website, or install it on a computer.
+You may not modify the font software, use it on another website, or install it on a computer.
 
-        License information is available at http://commercialtype.com/eula
-        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+License information is available at http://commercialtype.com/eula
+For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
 
-        Copyright (C) 2021 Schwartzco Inc.
-        License: 2105-ZIISZU     
+Copyright (C) 2021 Schwartzco Inc.
+License: 2105-ZIISZU     
 */
 
   @font-face {
@@ -75,43 +86,20 @@ a {
     font-stretch: normal;
   }
 
-  .heading {
-    font-family: var(--font-family-display);
-    font-size: 7rem;
+/* These styles will apply to the body p of pages fetched from api */
+  p {
+    line-height: 1.7;
   }
-
-  .section-heading {
-    font-family: var(--font-family-display);
-    font-size: 6rem;
-  }
-
-
 
 
 /******************/
 /* Utility Classes */
 /******************/
-.page-width {
-  margin-left: clamp(2rem, 3vw, 5rem);
-  margin-right: clamp(2rem, 3vw, 5rem);
-}
-.section-heading {
-  font-size: 4.6rem;
-}
-.paragraph {
-  font-size: 1.8rem;
-  line-height: 2.5rem;
-  width: 70%;
-}
 .color-accent {
   color: #EF6305;
 }
 .color-black {
   color: #2a2a2a;
-}
-.email {
-  color: #2a2a2a;
-  text-decoration: underline;
 }
 .underline {
   text-decoration: underline;
@@ -121,24 +109,6 @@ a {
 }
 .u-center {
   text-align: center;
-}
-.u-padding-bottom-2 {
-  padding-bottom: 2rem;
-}
-.u-padding-bottom-4 {
-  padding-bottom: 4rem;
-}
-.u-padding-bottom-6 {
-  padding-bottom: 6rem;
-}
-.u-padding-top-2 {
-  padding-top: 2rem;
-}
-.u-padding-top-4 {
-  padding-top: 4rem;
-}
-.u-margin-bottom-2 {
-  margin-bottom: 2rem;
 }
 
 

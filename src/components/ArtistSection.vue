@@ -1,7 +1,9 @@
 <template>
-    <section class="page-width">
-        <h2 class="section-heading"><span class="color-accent">Artist</span>slipp</h2>
-        <p class="paragraph">Hvert år kommer noen av de beste og mest talentfulle artistene til Vill Vill Vest. Klikk deg inn og finn en ny favoritt! Vi oppdaterer fortløpende med nye artister frem mot festivalen.</p>
+    <section>
+        <HeadingSection :title="title" />
+        <Paragraph>
+            Hvert år kommer noen av de beste og mest talentfulle artistene til Vill Vill Vest. Klikk deg inn og finn en ny favoritt! Vi oppdaterer fortløpende med nye artister frem mot festivalen.
+        </Paragraph>
         <!-- Refactor if directive statement -->
         <!-- Refactor: should be carousel? -->
         <article class="artistSection__EventRow" v-if="artists !== null">
@@ -12,18 +14,21 @@
 </template>
 
 <script>
+import HeadingSection from '@/components/HeadingSection.vue'
+import Paragraph from '@/components/Paragraph.vue'
 import EventRow from '@/components/EventRow.vue'
 export default {
     name: 'ArtistSection',
     components: {
-       EventRow
+       HeadingSection, Paragraph, EventRow
     },  
     data() {
         return {
             artists: null,
             random1: null,
             random2: null,
-            random3: null
+            random3: null,
+            title: "Artistslipp"
 
         }
     },
@@ -50,7 +55,7 @@ export default {
         .catch(err => console.log(err.message))
     },
     mounted() {
-        // Create 3 random numbers
+        // Create 3 random numbers and store in variables
         this.random1 = this.getRandomInt(74);
         this.random2 = this.getRandomInt(74);
         this.random3 = this.getRandomInt(74);
@@ -59,6 +64,11 @@ export default {
 </script>
 
 <style scoped>
+    section {
+        margin-top: 8rem;
+        margin-left: clamp(2rem, 3vw, 5rem);
+        margin-right: clamp(2rem, 3vw, 5rem);
+    }
     .artistSection__EventRow {
         margin-top: 4rem;
     }
