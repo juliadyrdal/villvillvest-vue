@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="{ name: 'ArtistDetails', params: { id: artist.id} }">
+    <router-link :to="{ name: 'ArtistDetails', params: { id: artist.id, slug: generateSlug} }">
         <article class="event__card">
             <div>
                 <img :src="artist.lineup_image[500]" :alt="artist.name" class="event__image">
@@ -14,7 +14,17 @@
 <script>
 export default {
     name: 'EventCard',
-    props: ['artist']
+    props: ['artist'],
+    computed: {
+        generateSlug() {
+            return this.artist.name.replace(/ /g, '-');
+        }
+    },
+    data() {
+        return {
+            artistSlug: null
+        }
+    }
 }
 </script>
 

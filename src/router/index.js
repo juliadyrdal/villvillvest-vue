@@ -28,7 +28,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "conference-schedule" */ '../views/ConfSchedule.vue')
   },
   {
-    path: '/artist/:id',
+    path: '/artist/:id/:slug',
     name: 'ArtistDetails',
     component: () => import(/* webpackChunkName: "artist-details" */ '../views/ArtistDetails.vue'),
     props: true

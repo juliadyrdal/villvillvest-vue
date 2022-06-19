@@ -1,7 +1,7 @@
 <template>
     <div>
         <div id="header" :class="{'header--alt': navIsShowing}">
-            <router-link @click="closeNav" to="/"><img class="logo" src="@/assets/logo-2021-orange.png" alt="Vill Vill Vest Logo"></router-link>
+            <router-link @click="closeNav" to="/"><img class="logo" :src="logoColor" alt="Vill Vill Vest Logo"></router-link>
             <Hamburger @toggleHamburger="toggleNav" :navIsShowing="navIsShowing" />
         </div>
 
@@ -21,7 +21,18 @@ export default {
     },
     data() {
         return {
-            navIsShowing: false
+            navIsShowing: false,
+            logoSignal: require('../assets/logo-2021-orange.png'),
+            logoWhite: require('../assets/logo-2021-white.png'),
+        }
+    },
+    computed: {
+        logoColor() {
+            if(this.$route.name === "Home" && !this.navIsShowing) {
+                return this.logoWhite;
+            } else {
+                return this.logoSignal;
+            }
         }
     },
     methods: {
@@ -38,6 +49,7 @@ export default {
         // Close nav when clicking on logo/Home button, enable scroll on body element
         closeNav() {
             this.navIsShowing = false;
+            this.logoSrc = this.logoWhite;
             const bodyEl = document.body;
             bodyEl.classList.remove("navOpen");
         }
@@ -66,48 +78,6 @@ export default {
     /* Fallback for < Safari 13.1 */
     width: min(max(7rem, 8vw), 10rem);
     width: clamp(7rem, 8vw, 10rem);
-}
-
-.nav-container {
-    display: grid;
-    grid-template-columns: 35% 1fr 1fr 1fr;
-    grid-column-gap: 6rem;
-    margin-top: 17vh;
-    padding-left: 7rem;
-    padding-right: 7rem;
-}
-.nav-blob {
-    margin-top: 10rem;
-    width: 35rem;
-    transform: rotate(-35deg)
-}
-.nav-heading {
-    color: #EF6305;
-    font-size: 2.4rem;
-}
-.nav-list {
-    list-style: none;
-    padding-left: 0;
-}
-.nav-item {
-    padding-bottom: 2rem;
-    font-size: 2rem;
-}
-.nav-social {
-    margin-top: 2rem;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    justify-self: start;
-}
-.social-link {
-    font-size: 3rem;
-    color: #EF6305;
-    text-decoration: none;
-}
-.social-link:not(:last-child) {
-    margin-right: 4rem;
 }
 </style>
 
