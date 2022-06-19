@@ -139,4 +139,16 @@ img {
     border: 3px solid var(--signal-color);
     padding: 2rem;
 }
+@media (max-width: 1200px) {
+    .artistDetails__media {
+        flex-direction: column;
+    }
+    img {
+        width: 100%;
+    }
+    .artistDetails__bio {
+        margin-top: 2rem;
+        width: auto;
+    }
+}
 </style>
