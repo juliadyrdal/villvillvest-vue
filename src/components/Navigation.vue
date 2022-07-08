@@ -1,5 +1,6 @@
 <template>
     <nav id="navigation">
+        <MqResponsive target="lg+">
         <section class="Navigation__container">
             <NavCategory v-for="category in categoryList" @clickLink="parentEmit" :category="category" :key="category.heading" />
         </section> 
@@ -16,15 +17,25 @@
                 </form>
             </div>
         </section>
+        </MqResponsive>
+
+        <!-- Mobile navigation  -->
+        <MqResponsive target="md-">
+            <section class="MobileNav__container">
+                <a @click="openSubNav" class="MobileNav__link" v-for="category in categoryList" :key="category.heading">{{ category.heading }}</a>
+            </section>
+        </MqResponsive>
     </nav>
 </template>
 
 <script>
+import { MqResponsive } from "vue3-mq";
 import NavCategory from '@/components/NavCategory.vue'
 export default {
+    inject: ["mq"],
     name: 'Navigation',
     components: {
-        NavCategory
+        MqResponsive, NavCategory
     },
     data() {
         return {
@@ -92,17 +103,22 @@ export default {
                         }
                     ] 
                 }
-            ]
+            ],
+            currentSubNav: null
         }
+
     },
     methods: {
         // Event emitted from child component -> 
         // emit further to parent component
         parentEmit() {
             this.$emit('clickEvent')
+        },
+        openSubNav(event) {
+            this.currentSubNav = event.target.innerText
+            console.log(this.currentSubNav)
         }
     }
-    
 }
 </script>
 
@@ -168,6 +184,26 @@ export default {
 .Navigation__cta button {
     padding: 2rem 8rem;
     font-size: 2rem;
+}
+
+/* Mobile styles */
+.MobileNav__container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.MobileNav__link {
+    font-size: 3.2rem;
+    font-family: var(--font-family-medium);
+    color: var(--signal-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+.MobileNav__link:not(:last-child) {
+    margin-bottom: 4rem;
 }
 </style>
 
