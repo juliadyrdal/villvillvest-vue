@@ -14,6 +14,8 @@
 
 <script>
 import PageDynamic from '@/components/PageDynamic.vue'
+import { defineComponent, computed, reactive } from 'vue'
+
 export default {
     components: {
         PageDynamic

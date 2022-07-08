@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="{ name: 'ArtistDetails', params: { id: artist.id, slug: generateSlug} }">
+    <router-link :to="{ name: 'ArtistDetails', params: { id: artist.id, slug: generateSlug, metaDesc: metaDesc} }">
         <article class="event__card">
             <div>
                 <img :src="artist.lineup_image[500]" :alt="artist.name" class="event__image">
@@ -18,12 +18,24 @@ export default {
     computed: {
         generateSlug() {
             return this.artist.name.replace(/ /g, '-');
+        },
+        metaDesc() {
+            const bio = this.artist.biography;
+            return bio.replace(/(<p>|<\/p>|<em>|<\/em>|&nbsp;|<br \/>)/g, '').replace(/(&aring;)/g, 'å').replace(/(&oslash;)/, 'ø').replace(/(&rsquo;)/, "'");
+        },
+        metaBio() {
+            return this.metaDesc.replaceAll(/<.*>.*?/ig);
         }
+        
+        // Computed properties for meta description and image
     },
     data() {
         return {
             artistSlug: null
         }
+    },
+    mounted() {
+        console.log(this.metaDesc)
     }
 }
 </script>

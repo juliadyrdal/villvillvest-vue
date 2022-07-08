@@ -29,7 +29,7 @@
 <script>
 export default {
     name: 'ArtistDetails',
-    props: ['id'],
+    props: ['id', 'slug', 'metaDesc'],
     components: {
   },
     data() {
@@ -62,6 +62,14 @@ export default {
         .then(res => res.json())
         .then(data => this.artist = data)
         .catch(err => console.log(err.message))
+    },
+    mounted() {
+        document.title = `${this.slug} | Vill Vill Vest`
+        const metaDescription = document.createElement('meta')
+        metaDescription.setAttribute('name', 'description')
+        metaDescription.setAttribute('content', `${this.metaDesc}`)
+        const head = document.querySelector('head')
+        head.appendChild(metaDescription)
     }
 }
 </script>
