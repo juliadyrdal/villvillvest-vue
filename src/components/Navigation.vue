@@ -21,9 +21,10 @@
 
         <!-- Mobile navigation  -->
         <MqResponsive target="md-">
-            <section class="MobileNav__container">
+            <section v-if="!currentSubNav" class="MobileNav__container">
                 <a @click="openSubNav" class="MobileNav__link" v-for="category in categoryList" :key="category.heading">{{ category.heading }}</a>
             </section>
+            <SubNav v-if="currentSubNav" @clickBack="closeSubNav" :list="subList" />
         </MqResponsive>
     </nav>
 </template>
@@ -31,11 +32,12 @@
 <script>
 import { MqResponsive } from "vue3-mq";
 import NavCategory from '@/components/NavCategory.vue'
+import SubNav from '@/components/SubNav.vue'
 export default {
     inject: ["mq"],
     name: 'Navigation',
     components: {
-        MqResponsive, NavCategory
+        MqResponsive, NavCategory, SubNav
     },
     data() {
         return {
@@ -104,7 +106,8 @@ export default {
                     ] 
                 }
             ],
-            currentSubNav: null
+            currentSubNav: null,
+            subList: null
         }
 
     },
@@ -114,9 +117,18 @@ export default {
         parentEmit() {
             this.$emit('clickEvent')
         },
+        closeSubNav() {
+            this.currentSubNav = null
+        },
         openSubNav(event) {
             this.currentSubNav = event.target.innerText
-            console.log(this.currentSubNav)
+            for(const category of this.categoryList) {
+                if(this.currentSubNav === category.heading) {
+                    this.subList = category
+                } 
+            }
+            // Populate subMenu with corresponding 
+            // categoryList -> loop through categoryList, find match for category.heading, render category.links 
         }
     }
 }
