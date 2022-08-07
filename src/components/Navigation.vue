@@ -127,8 +127,6 @@ export default {
                     this.subList = category
                 } 
             }
-            // Populate subMenu with corresponding 
-            // categoryList -> loop through categoryList, find match for category.heading, render category.links 
         }
     }
 }

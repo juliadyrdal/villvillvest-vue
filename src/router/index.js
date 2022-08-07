@@ -71,11 +71,11 @@ const routes = [
       metaTags: [
         {
           name: 'description',
-          content: 'metaDesc'
+          content: `slug ${metaTemplate}`
         },
         {
           property: 'og:description',
-          content: 'This is an open graph description of the 2022 conference schedule'
+          content: `slug ${metaTemplate}`
         }
       ]
     }

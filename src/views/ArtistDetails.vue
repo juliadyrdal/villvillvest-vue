@@ -11,7 +11,14 @@
                 <figcaption>Photo cred placeholder</figcaption>
             </figure>
 
-            <article class="artistDetails__bio" v-html="artist.biography"></article>
+            <div class="artistDetails__bio">
+                <article v-html="artist.biography"></article>
+                <ul>
+                    <li v-if="artist.links.website"><router-link to=""><img src="../assets/icons/instagram.svg" alt=""></router-link></li>
+                    <li v-if="artist.links.facebook_page_id"><router-link to=""><img src="../assets/icons/facebook.svg" alt=""></router-link></li>
+                    <li v-if="artist.links.youtube_channel_id"><router-link to=""><img src="../assets/icons/youtube.svg" alt=""></router-link></li>
+                </ul>
+            </div>
 
         </article>
 
@@ -64,12 +71,23 @@ export default {
         .catch(err => console.log(err.message))
     },
     mounted() {
+        // Remove current meta tags
+        const metaElement = document.querySelector('.metaDescription')
+        if (metaElement) {
+            metaElement.remove()
+        }
+        // Set primary meta tags
         document.title = `${this.slug} | Vill Vill Vest`
         const metaDescription = document.createElement('meta')
+        metaDescription.classList.add('metaDescription')
         metaDescription.setAttribute('name', 'description')
         metaDescription.setAttribute('content', `${this.metaDesc}`)
         const head = document.querySelector('head')
         head.appendChild(metaDescription)
+
+        // Set Open Graph meta tags
+        // const OgMetaTitle = document.createElement('meta')
+        // OgMetaTitle.setAttribute('og:title', `${this.slug}`)
     }
 }
 </script>
@@ -158,5 +176,21 @@ img {
         margin-top: 2rem;
         width: auto;
     }
+}
+
+.artistDetails__bio ul {
+    display: flex;
+    margin-top: 4rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+.artistDetails__bio li:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.artistDetails__bio img {
+    height: 4rem;
+    width: auto;
 }
 </style>
