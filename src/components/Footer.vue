@@ -9,15 +9,13 @@
             </form>
         </div>
         <div class="Footer__social">
-            <a href="https://www.instagram.com/villvillvest" target="_blank">
+            
                 <img src="../assets/icons/instagram.svg" alt="Vill Vill Vest Instagram">
-            </a>
-            <a href="https://www.facebook.com/701999263235784" target="_blank">
+            
                 <img src="../assets/icons/facebook.svg" alt="Vill Vill Vest Facebook">
-            </a>
-            <a href="https://www.youtube.com/channel/UCbXfGYyZiD6rux0bGge26UA" target="_blank">
+            
                 <img src="../assets/icons/youtube.svg" alt="Vill Vill Vest Youtube">
-            </a>
+            
         </div>
         <ul class="Footer__contact">
             <li>
