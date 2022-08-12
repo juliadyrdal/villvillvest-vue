@@ -1,18 +1,20 @@
 <template>
   <Header />
   <router-view/>
+  <sponsorSection />
   <Footer />
 </template>
 
 <script>
 // @ is an alias to /src
 import Header from '@/components/Header.vue'
+import SponsorSection from '@/components/SponsorSection.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'Home',
   components: {
-    Header, Footer
+    Header, Footer, SponsorSection
   },
 }
 </script>
