@@ -9,7 +9,9 @@
         <article class="artistSection__EventRow" v-if="artists !== null">
             <EventRow :artists="filteredArtists" />
         </article>
-        <router-link class="artistSection__link" to="/artists">Se alle artister &rarr;</router-link>
+        <div class="artistSection__link-container">
+            <router-link class="artistSection__link" to="/artists">Se alle artister &rarr;</router-link>
+        </div>
     </section>
 </template>
 
@@ -75,9 +77,11 @@ export default {
     .artistSection__EventRow {
         margin-top: 4rem;
     }
-    .artistSection__link {
+    .artistSection__link-container {
         display: flex;
         justify-content: flex-end;
+    }
+    .artistSection__link {
         padding-top: 2rem;
         font-size: 1.6rem;
         color: #333;

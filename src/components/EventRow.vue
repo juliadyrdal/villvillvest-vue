@@ -23,6 +23,7 @@ export default {
 <style scoped>
     .eventRow__container {
         display: flex;
+        justify-content: space-between;
         /* Create fallback for gap for older browsers - https://caniuse.com/flexbox-gap */
         /* gap: 2rem; */
     }
