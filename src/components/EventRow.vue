@@ -34,7 +34,7 @@ export default {
             flex-direction: column;
         }
         .eventRow__container .eventRow__card:not(:last-child) {
-        margin-right: 0;
+        margin-bottom: 2rem;
     }
     }
 </style>
