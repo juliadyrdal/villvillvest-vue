@@ -3,7 +3,11 @@
        <button @click="$emit('clickBack')">&#60; Back</button>
        <h1 v-if="list">{{ list.heading }}</h1>
        <ul v-if="list">
-           <li v-for="item in list.links" :key="item.link"><a>{{ item.title }}</a></li>
+           <li v-for="item in list.links" :key="item.link">
+           <router-link @click="$emit('clickLink')" :to="{ name: item.link }">
+                    <span>{{ item.title }}</span>
+                    </router-link>
+           </li>
        </ul>
    </div>
 </template>

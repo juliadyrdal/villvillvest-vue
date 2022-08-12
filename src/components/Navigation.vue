@@ -25,7 +25,7 @@
                 <a @click="openSubNav" class="MobileNav__link" v-for="category in categoryList" :key="category.heading">{{ category.heading }}</a>
             </section>
             <section v-if="currentSubNav" class="MobileNav__container">
-                <SubNav @clickBack="closeSubNav" :list="subList" />
+                <SubNav @clickBack="closeSubNav" @clickLink="parentEmit" :list="subList" />
             </section>
         </MqResponsive>
     </nav>
@@ -204,7 +204,7 @@ export default {
     flex-direction: column;
     position: absolute;
     top: 30%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
 }
 .MobileNav__link {
