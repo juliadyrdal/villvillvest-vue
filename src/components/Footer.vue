@@ -9,13 +9,15 @@
             </form>
         </div>
         <div class="Footer__social">
-            
+            <router-link to="https://www.instagram.com/villvillvest">
                 <img src="../assets/icons/instagram.svg" alt="Vill Vill Vest Instagram">
-            
+            </router-link>
+            <router-link to="https://www.facebook.com/701999263235784">
                 <img src="../assets/icons/facebook.svg" alt="Vill Vill Vest Facebook">
-            
+            </router-link>
+            <router-link to="https://www.youtube.com/channel/UCbXfGYyZiD6rux0bGge26UA">
                 <img src="../assets/icons/youtube.svg" alt="Vill Vill Vest Youtube">
-            
+            </router-link>
         </div>
         <ul class="Footer__contact">
             <li>
@@ -116,7 +118,7 @@ footer button {
     width: 3.5rem;
 }
 /* Refactor margin-right to use gap: 2rem; on flex parent if browser support */
-.Footer__social img:not(:last-child) {
+.Footer__social a:not(:last-child) {
     margin-right: 2rem;
 }
 .Footer__social img:last-child {

@@ -22,10 +22,12 @@ export default {
 <style scoped>
     .SubMenu__container {
         width: 30rem;
-        position: absolute;
+        height: 50vh;
+        padding-left: 5rem;
+        /* position: absolute;
         top: 22%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 55%;
+        transform: translate(-50%, -50%); */
     }
     button {
         box-shadow: none;
@@ -36,7 +38,7 @@ export default {
         cursor: pointer;
     }
     h1 {
-        margin-top: 8rem;
+        margin-top: 6rem;
         font-size: 3.2rem;
         font-family: var(--font-family-medium);
         color: var(--signal-color);

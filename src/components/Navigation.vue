@@ -24,7 +24,9 @@
             <section v-if="!currentSubNav" class="MobileNav__container">
                 <a @click="openSubNav" class="MobileNav__link" v-for="category in categoryList" :key="category.heading">{{ category.heading }}</a>
             </section>
-            <SubNav v-if="currentSubNav" @clickBack="closeSubNav" :list="subList" />
+            <section v-if="currentSubNav" class="MobileNav__container">
+                <SubNav @clickBack="closeSubNav" :list="subList" />
+            </section>
         </MqResponsive>
     </nav>
 </template>
