@@ -15,7 +15,7 @@
             <li><img src="@/assets/sponsors/Grieg-Foundation-1.webp" alt=""></li>
         </ul>
         <div class="sponsorLink-container">
-            <router-link to="/">Se alle Partnere &rarr;</router-link>
+            <router-link to="/our-partners">Se alle Partnere &rarr;</router-link>
         </div>
         <hr>
     </section>
@@ -44,8 +44,8 @@ section {
 h2 {
     padding-top: 6rem;
     font-family: var(--font-family-medium);
-    font-size: 2.8rem;
-    color: var(--signal-color);
+    font-size: 2rem;
+    color: #333;
 }
 
 ul {
@@ -89,5 +89,17 @@ a {
     padding-top: 2rem;
     font-size: 1.6rem;
     color: #333;
+}
+
+@media (max-width: 600px) {
+    h2 {
+        padding-bottom: 4rem;
+    }
+    ul {
+        grid-template-columns: 1fr 1fr;
+    }
+    li:not(:last-child) {
+    margin-right: 10vw;
+}
 }
 </style>

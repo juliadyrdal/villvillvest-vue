@@ -17,7 +17,7 @@ export default {
         margin-right: min(max(2rem, 3vw), 5rem);
         margin-left: clamp(2rem, 3vw, 5rem);
         margin-right: clamp(2rem, 3vw, 5rem);
-        min-height: 50vh;
+        min-height: 30vh;
     }
 </style>
 
