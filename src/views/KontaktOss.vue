@@ -4,7 +4,7 @@
     <PageDynamic :pageId="pageId">
         <!-- Add content for the HeadingMain component -->
         <template v-slot:heading>
-            Contact us
+            Kontakt oss
         </template>
         <template v-slot:staticContent>
             <!-- Static content goes here -->
@@ -21,7 +21,7 @@ export default {
     data() {
         return {
             // Id of the page in the Appmiral database. Use ID as title may differ.
-            pageId: 424806,
+            pageId: 428408,
         }
     }
 }

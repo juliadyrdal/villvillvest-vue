@@ -4,7 +4,7 @@
     <PageDynamic :pageId="pageId">
         <!-- Add content for the HeadingMain component -->
         <template v-slot:heading>
-            Tickets
+            Billetter
         </template>
         <template v-slot:staticContent>
             <!-- Static content: ticket cards -->
@@ -23,7 +23,7 @@ export default {
     data() {
         return {
             // Id of the page in the Appmiral database. Use ID as title may differ.
-            pageId: 424806,
+            pageId: 428410,
         }
     }
 }
