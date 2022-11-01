@@ -1,5 +1,5 @@
 <template>
-    <Hero heading="9. – 11. September" />
+    <Hero heading="1. – 3. September" />
     <Intro />
     <ArtistSection />
     <!-- <PartnersMain /> -->
