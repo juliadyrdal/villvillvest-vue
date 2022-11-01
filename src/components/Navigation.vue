@@ -4,19 +4,19 @@
         <section class="Navigation__container">
             <NavCategory v-for="category in categoryList" @clickLink="parentEmit" :category="category" :key="category.heading" />
         </section> 
-        <section class="Navigation__footer">
+        <!-- <section class="Navigation__footer">
             <div class="Navigation__cta">   
-                <button>Secure Tickets &rarr;</button>
+                <router-link to="/ledig-stilling"><button>Ledig stilling &rarr;</button></router-link>
             </div>
             <div class="Navigation__form">
                 <h2>Subscribe to our newsletter</h2>
-                <form action="/my-handling-form-page" method="post">
+                <form action="/my-handling-form-page" method="post"> -->
                     <!-- Refactor: Add label for screen reader -->
-                    <input type="email" id="email" name="subscriber_email" placeholder="Email address" />
+                    <!-- <input type="email" id="email" name="subscriber_email" placeholder="Email address" />
                     <button type="submit">Sign up</button>
                 </form>
             </div>
-        </section>
+        </section> -->
         </MqResponsive>
 
         <!-- Mobile navigation  -->
@@ -45,7 +45,7 @@ export default {
         return {
             categoryList: [
                 {
-                    "heading": "Conference",
+                    "heading": "Konferanse",
                     "links": [
                         {
                             "link": "Speakers",
@@ -60,13 +60,17 @@ export default {
                             "title": "Delegate tickets"
                         },
                         {
+                            "link": "Venues",
+                            "title": "Venues"
+                        },
+                        {
                             "link": "YoungDelegate",
-                            "title": "Young delegate"
-                        }
+                            "title": "Ung delegat"
+                        },
                     ]
                 },
                 {
-                   "heading": "Music",
+                   "heading": "Festival",
                     "links": [
                         {
                             "link": "Artists",
@@ -78,32 +82,36 @@ export default {
                         },
                         {
                             "link": "Billetter",
-                            "title": "Tickets"
-                        }
-                    ] 
-                },
-                {
-                   "heading": "Festival",
-                    "links": [
-                        {
-                            "link": "OmVillVillVest",
-                            "title": "About Vill Vill Vest"
-                        },
-                        {
-                            "link": "Frivillig",
-                            "title": "Volunteer"
+                            "title": "Billetter"
                         },
                         {
                             "link": "Venues",
-                            "title": "Venues and stages"
+                            "title": "Venues og scener"
+                        },
+                    ] 
+                },
+                {
+                   "heading": "Vill Vill Vest",
+                    "links": [
+                        {
+                            "link": "OmVillVillVest",
+                            "title": "Om Vill Vill Vest"
+                        },
+                        {
+                            "link": "Frivillig",
+                            "title": "Frivillig"
                         },
                         {
                             "link": "OurPartners",
-                            "title": "Our Partners"
+                            "title": "Våre partnere"
                         },
                         {
                             "link": "KontaktOss",
-                            "title": "Contact us"
+                            "title": "Kontakt oss"
+                        },
+                        {
+                            "link": "LedigStilling",
+                            "title": "Ledig stilling"
                         }
                     ] 
                 }

@@ -30,7 +30,7 @@ export default {
 /* Variables */
 /******************/
 :root {
-  --signal-color: #EF6305;
+  --signal-color: #FE92C4;
   --font-family-display:'Druk Wide Super', sans-serif;
   --font-family-medium:'Druk Wide Medium', sans-serif;
   --font-family-small: 'Helvetica Neue', 'Open Sans', sans-serif; 

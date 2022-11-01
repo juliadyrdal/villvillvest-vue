@@ -125,7 +125,12 @@ const routes = [
     path: '/billetter',
     name: 'Billetter',
     component: () => import(/* webpackChunkName: "billetter" */ '../views/Billetter.vue')
-  }
+  },
+  {
+    path: '/ledig-stilling',
+    name: 'LedigStilling',
+    component: () => import(/* webpackChunkName: "ledig-stilling" */ '../views/LedigStilling.vue')
+  },
 ]
 
 const router = createRouter({

@@ -22,7 +22,7 @@ export default {
     data() {
         return {
             navIsShowing: false,
-            logoSignal: require('../assets/logo-2021-orange.png'),
+            logoSignal: require('../assets/logo-2022-pink.svg'),
             logoWhite: require('../assets/logo-2021-white.png'),
         }
     },
