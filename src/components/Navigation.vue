@@ -53,7 +53,7 @@ export default {
                         },
                         {
                             "link": "ConfSchedule",
-                            "title": "Schedule"
+                            "title": "Konferanseprogram"
                         },
                         {
                             "link": "DelegateTickets",
@@ -78,7 +78,7 @@ export default {
                         },
                         {
                             "link": "ArtistsSchedule",
-                            "title": "Schedule",
+                            "title": "Artistprogram",
                         },
                         {
                             "link": "Billetter",
