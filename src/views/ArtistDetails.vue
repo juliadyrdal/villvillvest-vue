@@ -8,7 +8,7 @@
             <figure>
                 <img :src="artist.lineup_image[500]" alt="artist.name">
                 <!-- Placeholder for photo credit, create custom field in appmiral -->
-                <figcaption>Photo cred placeholder</figcaption>
+                <!-- <figcaption>Photo cred placeholder</figcaption> -->
             </figure>
 
             <div class="artistDetails__bio">
@@ -61,9 +61,9 @@ export default {
         }
     },
     created() {
-        fetch('https://app.appmiral.com/api/v6/events/villvillvest/editions/villvillvest2021/artists/' + this.id + '?child_edition=villvillvest2021festival', {
+        fetch('https://app.appmiral.com/api/v6/events/villvillvest/editions/villvillvest2022/artists/' + this.id + '?child_edition=villvillvest2022festival', {
             headers: {
-                'x-protect': process.env.VUE_APP_APPMIRAL_API_KEY
+                'x-protect': process.env.VUE_APP_APPMIRAL_API_KEY_22
             }
         })
         .then(res => res.json())

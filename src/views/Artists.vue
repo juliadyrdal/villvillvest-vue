@@ -29,9 +29,9 @@ export default {
     },
     mounted() {
         axios
-        .get('https://app.appmiral.com/api/v6/events/villvillvest/editions/villvillvest2021/artists?child_edition=villvillvest2021festival&max_per_page=74', {
+        .get('https://app.appmiral.com/api/v6/events/villvillvest/editions/villvillvest2022/artists?child_edition=villvillvest2022festival&max_per_page=74', {
             headers: {
-            'x-protect': process.env.VUE_APP_APPMIRAL_API_KEY
+            'x-protect': process.env.VUE_APP_APPMIRAL_API_KEY_22
         }
         })
       .then(response => (this.artists = response.data.data))

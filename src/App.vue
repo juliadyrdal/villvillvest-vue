@@ -98,7 +98,7 @@ License: 2105-ZIISZU
 /* Utility Classes */
 /******************/
 .color-accent {
-  color: #EF6305;
+  color: #FE92C4;
 }
 .color-black {
   color: #2a2a2a;
