@@ -131,6 +131,11 @@ const routes = [
     name: 'LedigStilling',
     component: () => import(/* webpackChunkName: "ledig-stilling" */ '../views/LedigStilling.vue')
   },
+  {
+    path: '/venues-og-scener',
+    name: 'VenuesOgScener',
+    component: () => import(/* webpackChunkName: "ledig-stilling" */ '../views/VenuesOgScener.vue')
+  },
 ]
 
 const router = createRouter({

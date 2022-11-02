@@ -49,7 +49,7 @@ export default {
                     "links": [
                         {
                             "link": "Speakers",
-                            "title": "Speakers 2021"
+                            "title": "Speakers 2022"
                         },
                         {
                             "link": "ConfSchedule",
@@ -74,7 +74,7 @@ export default {
                     "links": [
                         {
                             "link": "Artists",
-                            "title": "Lineup 2021"
+                            "title": "Lineup 2022"
                         },
                         {
                             "link": "ArtistsSchedule",
