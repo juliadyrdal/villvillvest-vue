@@ -21,7 +21,7 @@ export default {
     data() {
         return {
             // Id of the page in the Appmiral database. Use ID as title may differ.
-            pageId: 424806,
+            pageId: 428420,
         }
     }
 }

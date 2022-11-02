@@ -85,7 +85,7 @@ export default {
                             "title": "Billetter"
                         },
                         {
-                            "link": "Venues",
+                            "link": "VenuesOgScener",
                             "title": "Venues og scener"
                         },
                     ] 

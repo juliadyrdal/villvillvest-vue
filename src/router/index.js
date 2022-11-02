@@ -27,14 +27,18 @@ const routes = [
     }
   },
   {
-    path: '/artists',
+    path: '/artister',
     name: 'Artists',
     component: () => import(/* webpackChunkName: "artists" */ '../views/Artists.vue')
   },
   {
-    path: '/artists-schedule',
+    path: '/artistprogram',
     name: 'ArtistsSchedule',
-    component: () => import(/* webpackChunkName: "artists-schedule" */ '../views/ArtistsSchedule.vue')
+    component: () => import(/* webpackChunkName: "artists-schedule" */ '../views/ArtistsSchedule.vue'),
+    meta: {
+      publicRoute: true,
+      title: `Artistprogram ${metaTemplate}`,
+    }
   },
   {
     path: '/speakers',
@@ -42,12 +46,12 @@ const routes = [
     component: () => import(/* webpackChunkName: "speakers" */ '../views/Speakers.vue')
   },
   {
-    path: '/conference-schedule',
+    path: '/konferanseprogram',
     name: 'ConfSchedule',
     component: () => import(/* webpackChunkName: "conference-schedule" */ '../views/ConfSchedule.vue'),
     meta: {
       publicRoute: true,
-      title: `Conference Schedule ${metaTemplate}`,
+      title: `Konferanseprogram ${metaTemplate}`,
       metaTags: [
         {
           name: 'description',
@@ -89,52 +93,92 @@ const routes = [
   {
     path: '/delegate-tickets',
     name: 'DelegateTickets',
-    component: () => import(/* webpackChunkName: "delegate-tickets" */ '../views/DelegateTickets.vue')
+    component: () => import(/* webpackChunkName: "delegate-tickets" */ '../views/DelegateTickets.vue'),
+    meta: {
+      publicRoute: true,
+      title: `Delegate tickets ${metaTemplate}`,
+    }
   },
   {
-    path: '/young-delegate',
+    path: '/ung-delegat',
     name: 'YoungDelegate',
-    component: () => import(/* webpackChunkName: "young-delegate" */ '../views/YoungDelegate.vue')
+    component: () => import(/* webpackChunkName: "young-delegate" */ '../views/YoungDelegate.vue'),
+    meta: {
+      publicRoute: true,
+      title: `Ung delegat ${metaTemplate}`,
+    }
   },
   {
     path: '/om-vill-vill-vest',
     name: 'OmVillVillVest',
-    component: () => import(/* webpackChunkName: "om-vill-vill-vest" */ '../views/OmVillVillVest.vue')
+    component: () => import(/* webpackChunkName: "om-vill-vill-vest" */ '../views/OmVillVillVest.vue'),
+    meta: {
+      publicRoute: true,
+      title: `Om Vill Vill Vest ${metaTemplate}`,
+    }
   },
   {
-    path: '/our-partners',
+    path: '/partnere',
     name: 'OurPartners',
-    component: () => import(/* webpackChunkName: "our-partners" */ '../views/OurPartners.vue')
+    component: () => import(/* webpackChunkName: "our-partners" */ '../views/OurPartners.vue'),
+    meta: {
+      publicRoute: true,
+      title: `Våre partnere ${metaTemplate}`,
+    }
   },
   {
     path: '/kontakt-oss',
     name: 'KontaktOss',
-    component: () => import(/* webpackChunkName: "kontakt-oss" */ '../views/KontaktOss.vue')
-  },
-  {
-    path: '/venues-and-stages',
-    name: 'Venues',
-    component: () => import(/* webpackChunkName: "venues-and-stages" */ '../views/Venues.vue')
+    component: () => import(/* webpackChunkName: "kontakt-oss" */ '../views/KontaktOss.vue'),
+    meta: {
+      publicRoute: true,
+      title: `Kontakt oss ${metaTemplate}`,
+    }
   },
   {
     path: '/frivillig',
     name: 'Frivillig',
-    component: () => import(/* webpackChunkName: "frivillig" */ '../views/Frivillig.vue')
+    component: () => import(/* webpackChunkName: "frivillig" */ '../views/Frivillig.vue'),
+    meta: {
+      publicRoute: true,
+      title: `Frivillig ${metaTemplate}`,
+    }
   },
   {
     path: '/billetter',
     name: 'Billetter',
-    component: () => import(/* webpackChunkName: "billetter" */ '../views/Billetter.vue')
+    component: () => import(/* webpackChunkName: "billetter" */ '../views/Billetter.vue'),
+    meta: {
+      publicRoute: true,
+      title: `Billetter ${metaTemplate}`,
+    }
   },
   {
     path: '/ledig-stilling',
     name: 'LedigStilling',
-    component: () => import(/* webpackChunkName: "ledig-stilling" */ '../views/LedigStilling.vue')
+    component: () => import(/* webpackChunkName: "ledig-stilling" */ '../views/LedigStilling.vue'),
+    meta: {
+      publicRoute: true,
+      title: `Ledig stilling ${metaTemplate}`,
+    }
   },
   {
     path: '/venues-og-scener',
     name: 'VenuesOgScener',
-    component: () => import(/* webpackChunkName: "ledig-stilling" */ '../views/VenuesOgScener.vue')
+    component: () => import(/* webpackChunkName: "ledig-stilling" */ '../views/VenuesOgScener.vue'),
+    meta: {
+      publicRoute: true,
+      title: `Venues og scener ${metaTemplate}`,
+    }
+  },
+  {
+    path: '/konferanse-venues',
+    name: 'Venues',
+    component: () => import(/* webpackChunkName: "ledig-stilling" */ '../views/Venues.vue'),
+    meta: {
+      publicRoute: true,
+      title: `Konferansevenues ${metaTemplate}`,
+    }
   },
 ]
 
