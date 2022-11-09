@@ -35,7 +35,7 @@
 
 <script>
 export default {
-    name: 'ArtistDetails',
+    name: 'SpeakerDetails',
     props: ['id', 'slug', 'metaDesc'],
     components: {
   },

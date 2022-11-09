@@ -6,24 +6,24 @@
         <Paragraph>
             Hvert år kommer noen av de beste og mest talentfulle artistene til Vill Vill Vest. Klikk deg inn og finn en ny favoritt! Vi oppdaterer fortløpende med nye artister frem mot festivalen.
         </Paragraph>
-        <EventGrid :artists="artists" />
+        <EventGridSpeakers :speakers="speakers" />
     </section>
 </template>
 
 <script>
 import HeadingMain from '@/components/HeadingMain.vue'
 import Paragraph from '@/components/Paragraph.vue'
-import EventGrid from '@/components/EventGrid.vue'
+import EventGridSpeakers from '@/components/EventGridSpeakers.vue'
 
 export default {
     // TASK: Add isLoading boolean, add animation to EventGrid when true
-    name: 'Artists',
+    name: 'Speakers',
     components: {
-    HeadingMain, Paragraph, EventGrid
+    HeadingMain, Paragraph, EventGridSpeakers
   },
      data() {
         return {
-            artists: null,
+            speakers: null,
             info: null,
         }
     },
@@ -34,9 +34,9 @@ export default {
             'x-protect': process.env.VUE_APP_APPMIRAL_API_KEY_22
         }
         })
-      .then(response => (this.artists = response.data.data))
+      .then(response => (this.speakers = response.data.data))
 
-      //console.log(this.artists.data)
+      //console.log(this.speakers.data)
     }
 }
 </script>

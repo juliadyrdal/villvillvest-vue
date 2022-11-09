@@ -85,7 +85,7 @@ const routes = [
     }
   },
   {
-    path: '/speaker/:id',
+    path: '/speaker/:id/:slug',
     name: 'SpeakerDetails',
     component: () => import(/* webpackChunkName: "speaker-details" */ '../views/SpeakerDetails.vue'),
     props: true
