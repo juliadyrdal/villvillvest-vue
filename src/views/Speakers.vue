@@ -3,9 +3,7 @@
         <HeadingMain>
             Konferanse 2022
         </HeadingMain>
-        <Paragraph>
-            Hvert år kommer noen av de beste og mest talentfulle artistene til Vill Vill Vest. Klikk deg inn og finn en ny favoritt! Vi oppdaterer fortløpende med nye artister frem mot festivalen.
-        </Paragraph>
+        <PageBody :pageId="428475" />
         <EventGridSpeakers :speakers="speakers" />
     </section>
 </template>
@@ -14,12 +12,13 @@
 import HeadingMain from '@/components/HeadingMain.vue'
 import Paragraph from '@/components/Paragraph.vue'
 import EventGridSpeakers from '@/components/EventGridSpeakers.vue'
+import PageBody from '@/components/PageBody.vue'
 
 export default {
     // TASK: Add isLoading boolean, add animation to EventGrid when true
     name: 'Speakers',
     components: {
-    HeadingMain, Paragraph, EventGridSpeakers
+    HeadingMain, Paragraph, EventGridSpeakers, PageBody
   },
      data() {
         return {
