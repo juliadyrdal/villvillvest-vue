@@ -29,7 +29,11 @@ const routes = [
   {
     path: '/artister',
     name: 'Artists',
-    component: () => import(/* webpackChunkName: "artists" */ '../views/Artists.vue')
+    component: () => import(/* webpackChunkName: "artists" */ '../views/Artists.vue'),
+    meta: {
+      publicRoute: true,
+      title: `Artister ${metaTemplate}`,
+    }
   },
   {
     path: '/artistprogram',
@@ -43,7 +47,11 @@ const routes = [
   {
     path: '/speakers',
     name: 'Speakers',
-    component: () => import(/* webpackChunkName: "speakers" */ '../views/Speakers.vue')
+    component: () => import(/* webpackChunkName: "speakers" */ '../views/Speakers.vue'),
+    meta: {
+      publicRoute: true,
+      title: `Konferanse ${metaTemplate}`,
+    }
   },
   {
     path: '/konferanseprogram',
@@ -88,7 +96,21 @@ const routes = [
     path: '/speaker/:id/:slug',
     name: 'SpeakerDetails',
     component: () => import(/* webpackChunkName: "speaker-details" */ '../views/SpeakerDetails.vue'),
-    props: true
+    props: true,
+    meta: {
+      publicRoute: true,
+      title: `slug ${metaTemplate}`,
+      metaTags: [
+        {
+          name: 'description',
+          content: `slug ${metaTemplate}`
+        },
+        {
+          property: 'og:description',
+          content: `slug ${metaTemplate}`
+        }
+      ]
+    }
   },
   {
     path: '/delegate-tickets',
