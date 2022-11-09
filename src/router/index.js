@@ -45,7 +45,7 @@ const routes = [
     }
   },
   {
-    path: '/speakers',
+    path: '/conference-sessions',
     name: 'Speakers',
     component: () => import(/* webpackChunkName: "speakers" */ '../views/Speakers.vue'),
     meta: {

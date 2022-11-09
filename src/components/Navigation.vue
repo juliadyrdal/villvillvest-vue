@@ -49,7 +49,7 @@ export default {
                     "links": [
                         {
                             "link": "Speakers",
-                            "title": "Speakers 2022"
+                            "title": "Sessions 2022"
                         },
                         {
                             "link": "ConfSchedule",

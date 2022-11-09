@@ -1,7 +1,7 @@
 <template>
     <section>
         <HeadingMain>
-            Konferanse 2022
+            Conference 2022
         </HeadingMain>
         <PageBody :pageId="428475" />
         <EventGridSpeakers :speakers="speakers" />
