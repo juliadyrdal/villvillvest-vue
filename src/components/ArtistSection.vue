@@ -87,7 +87,7 @@ export default {
         color: #333;
     }
     .artistSection__link:hover {
-        color: var(--signal-color);
+        color: var(--signal-color-primary);
     }
 </style>
 

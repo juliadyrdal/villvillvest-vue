@@ -4,7 +4,7 @@
             <h2>Subscribe to our newsletter</h2>
             <form action="/my-handling-form-page" method="post">
                 <!-- Refactor: Add label for screen reader -->
-                <input v-model="message" type="email" id="email" name="subscriber_email" placeholder="Email address" />
+                <div class="border-bottom"><input class="footer__input" v-model="message" type="email" id="email" name="subscriber_email" placeholder="Email address" /></div>
                 <button type="submit">Sign up</button>
             </form>
         </div>
@@ -89,19 +89,26 @@ footer form {
     grid-area: form;
     width: 100%;
 }
-footer input {
+.footer__input {
     flex-grow: 1;
     margin-right: 1.4rem;
-    border: 1px solid #D9D9D9;
+    border: none;
+    background-color: #f5f5f5;
 }
-footer input::placeholder {
+.border-bottom {
+    margin-right: 2rem;
+    width: 40rem;
+    border-bottom: 1px solid #000;
+}
+.footer__input::placeholder {
     padding-left: 1rem;
 }
 /* Make button darker on hover when refactoring to scss */
 footer button {
     padding: 1.2rem 4rem;
-    background-color: var(--signal-color);
+    background-color: var(--signal-color-secondary);
     border: none; /* Remove default button style */
+    border-radius: 45px;
     color: #fff;
     font-size: 1.4rem;
     font-weight: bold;
@@ -140,7 +147,7 @@ footer button {
     margin: 1.4rem 0 1rem 0;
     font-family: var(--font-family-medium);
     font-size: 2.8rem;
-    color: var(--signal-color);
+    color: var(--signal-color-primary);
 }
 .Footer__contact h3 {
     font-size: 1.4rem;
@@ -151,7 +158,7 @@ footer button {
 footer hr {
     grid-area: hr;
     border: none;
-    border-bottom: .5px solid var(--signal-color);
+    border-bottom: .5px solid var(--signal-color-secondary);
     width: 60%;
 }
 .Footer__links {

@@ -194,7 +194,7 @@ export default {
 /* Make button darker on hover when refactoring to scss */
 .Navigation__footer button {
     padding: 1.2rem 4rem;
-    background-color: var(--signal-color);
+    background-color: var(--signal-color-secondary);
     border: none; /* Remove default button style */
     color: #fff;
     font-size: 1.4rem;
@@ -218,7 +218,7 @@ export default {
 .MobileNav__link {
     font-size: 3.2rem;
     font-family: var(--font-family-medium);
-    color: var(--signal-color);
+    color: var(--signal-color-primary);
     text-decoration: none;
     cursor: pointer;
 }

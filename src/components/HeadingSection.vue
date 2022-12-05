@@ -12,7 +12,7 @@ export default {
 
 <style scoped>
     h2 {
-        color: var(--signal-color);
+        color: var(--signal-color-primary);
         font-family: var(--font-family-medium);
         font-size: 4rem;
     } 

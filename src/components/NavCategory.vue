@@ -29,7 +29,7 @@ export default {
     padding-bottom: .5rem;
     font-size: 3.2rem;
     font-family: var(--font-family-medium);
-    color: var(--signal-color);
+    color: var(--signal-color-primary);
 }
 .navCategory__list {
     list-style: none;

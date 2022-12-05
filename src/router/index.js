@@ -27,7 +27,7 @@ const routes = [
     }
   },
   {
-    path: '/artister',
+    path: '/artists',
     name: 'Artists',
     component: () => import(/* webpackChunkName: "artists" */ '../views/Artists.vue'),
     meta: {

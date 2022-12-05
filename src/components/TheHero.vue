@@ -36,7 +36,7 @@ export default {
         font-size: clamp(3rem, 7vw, 9.4rem);
         font-weight: 900;
         text-transform: uppercase;
-        color: var(--signal-color);
+        color: #fff;
         text-align: center;
     }
 </style>

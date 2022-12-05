@@ -1,6 +1,6 @@
 <template>
     <section class="hero">
-        <img src="../assets/hero.jpg" alt="Tacobitch" class="hero__image">
+        <img src="../assets/hero-16-9.jpg" alt="Tacobitch" class="hero__image">
         <span class="hero__heading">{{ heading }}</span> 
     </section>
 </template>
@@ -23,7 +23,6 @@ export default {
     .hero__image {
         width: 100%;
         height: 100vh;
-        object-fit: cover;
     }
     .hero__heading {
         position: absolute;
@@ -36,7 +35,7 @@ export default {
         font-size: clamp(3rem, 7vw, 9.4rem);
         font-weight: 900;
         text-transform: uppercase;
-        color: var(--signal-color);
+        color: #fff;
         text-align: center;
     }
 </style>

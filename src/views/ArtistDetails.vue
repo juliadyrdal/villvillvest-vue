@@ -104,7 +104,7 @@ section {
     font-family: var(--font-family-display);
     font-size: 7rem;
     text-align: left;
-    color: var(--signal-color);
+    color: var(--signal-color-primary);
 }
 .artistDetails__schedule {
     font-size: 1.6rem;
@@ -122,7 +122,7 @@ figcaption {
     display: block;
     padding: 1rem 0 2rem 0;
     text-decoration: underline;
-    text-decoration-color: var(--signal-color);
+    text-decoration-color: var(--signal-color-primary);
 }
 
 img {
@@ -162,7 +162,7 @@ img {
     width: 80vw;
     margin-top: 0;
     font-size: 1.6rem;
-    border: 3px solid var(--signal-color);
+    border: 3px solid var(--signal-color-secondary);
     padding: 2rem;
 }
 @media (max-width: 1200px) {

@@ -45,7 +45,7 @@ export default {
         margin-top: 6rem;
         font-size: 3.2rem;
         font-family: var(--font-family-medium);
-        color: var(--signal-color);
+        color: var(--signal-color-primary);
     }
     ul {
         margin-top: 4rem;

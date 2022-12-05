@@ -45,7 +45,7 @@ export default {
         text-decoration: none;
     }
     .event__card {
-        color: var(--signal-color);
+        color: var(--signal-color-primary);
         background: #F2EDED;
         cursor: pointer;
         height: 100%;

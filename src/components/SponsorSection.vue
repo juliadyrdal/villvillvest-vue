@@ -75,7 +75,7 @@ img {
 
 hr {
     border: none;
-    border-bottom: .5px solid var(--signal-color);
+    border-bottom: .5px solid var(--signal-color-secondary);
     width: 75%;
 }
 

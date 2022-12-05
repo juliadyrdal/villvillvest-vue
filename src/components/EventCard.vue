@@ -45,10 +45,11 @@ export default {
         text-decoration: none;
     }
     .event__card {
-        color: var(--signal-color);
-        background: #F2EDED;
+        color: var(--signal-color-primary);
+        background: #fff;
         cursor: pointer;
         height: 100%;
+        border-radius: 45px;
     }
     .event__image {
         width: 100%;

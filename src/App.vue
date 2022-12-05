@@ -30,7 +30,11 @@ export default {
 /* Variables */
 /******************/
 :root {
-  --signal-color: #FE92C4;
+  --signal-color: #3d66f2;
+  /* Headings, icons */
+  --signal-color-primary: #3d66f2;
+    /* Buttons and a-tag and underline on hover */
+  --signal-color-secondary: #24f509;
   --font-family-display:'Druk Wide Super', sans-serif;
   --font-family-medium:'Druk Wide Medium', sans-serif;
   --font-family-small: 'Helvetica Neue', 'Open Sans', sans-serif; 
@@ -42,6 +46,7 @@ export default {
 }
 body {
   margin: 0;
+  background-color: #f5f5f5;
 }
 body.navOpen {
   overflow: hidden;
@@ -98,7 +103,7 @@ License: 2105-ZIISZU
 /* Utility Classes */
 /******************/
 .color-accent {
-  color: #FE92C4;
+  color: #3d66f2;
 }
 .color-black {
   color: #2a2a2a;
