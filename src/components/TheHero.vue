@@ -32,8 +32,8 @@ export default {
         transform: translate(-50%, -50%);
         font-family: var(--font-family-display);
         /* Clamp Fallback for < Safari 13.1 */
-        font-size: min(max(3rem, 7vw), 9.4rem);
-        font-size: clamp(3rem, 7vw, 9.4rem);
+        font-size: min(max(2rem, 7vw), 7.4rem);
+        font-size: clamp(2rem, 7vw, 7.4rem);
         font-weight: 900;
         text-transform: uppercase;
         color: #fff;
