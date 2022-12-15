@@ -144,9 +144,8 @@ export default {
 
 <style scoped>
 #navigation {
-    margin-left: clamp(2rem, 3vw, 5rem);
-    margin-right: clamp(2rem, 3vw, 5rem);
-    padding: 0 6rem;
+    padding-left: clamp(4rem, 5vw, 10rem);
+    padding-right: clamp(4rem, 5vw, 10rem);
     height: 100vh;
     background: #fff;
     position: relative;
@@ -155,7 +154,7 @@ export default {
 .Navigation__container {
     display: flex;
     justify-content: space-between;
-    margin-top: 6vh;
+    padding-top: 6vh;
 } 
 .Navigation__footer {
     display: grid;

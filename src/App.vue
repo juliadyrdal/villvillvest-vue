@@ -55,7 +55,8 @@ a {
   color: #2a2a2a;
 }
 a:hover {
-  text-decoration-color: var(--signal-color);
+  text-decoration-color: var(--signal-color-secondary);
+  color: var(--signal-)
 }
 
 
