@@ -1,7 +1,7 @@
 <template>
   <Header />
   <router-view/>
-  <sponsorSection />
+  <SponsorSection />
   <Footer />
 </template>
 
@@ -56,7 +56,7 @@ a {
 }
 a:hover {
   text-decoration-color: var(--signal-color-secondary);
-  color: var(--signal-)
+  color: var(--signal-color-secondary);
 }
 
 
