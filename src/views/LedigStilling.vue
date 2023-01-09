@@ -34,4 +34,14 @@ export default {
         width: 85vw;
         border: none;
     }
+
+    @media (max-width: 600px) {
+        iframe {
+        height: 250vh;
+        width: 95vw;
+    }
+
+    }
+    
+    
 </style>
