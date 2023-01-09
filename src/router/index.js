@@ -176,12 +176,12 @@ const routes = [
     }
   },
   {
-    path: '/ledig-stilling',
-    name: 'LedigStilling',
+    path: '/artistpamelding',
+    name: 'ArtistPamelding',
     component: () => import(/* webpackChunkName: "ledig-stilling" */ '../views/LedigStilling.vue'),
     meta: {
       publicRoute: true,
-      title: `Ledig stilling ${metaTemplate}`,
+      title: `Artistpåmelding ${metaTemplate}`,
     }
   },
   {

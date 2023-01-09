@@ -4,10 +4,11 @@
     <PageDynamic :pageId="pageId">
         <!-- Add content for the HeadingMain component -->
         <template v-slot:heading>
-            Ledig stilling
+            Artistpåmelding
         </template>
         <template v-slot:staticContent>
             <!-- Static content goes here -->
+            
         </template>
     </PageDynamic>
 </template>
@@ -23,6 +24,14 @@ export default {
             // Id of the page in the Appmiral database. Use ID as title may differ.
             pageId: 428406,
         }
-    }
+    },
 }
 </script>
+
+<style>
+    iframe {
+        height: 250vh;
+        width: 85vw;
+        border: none;
+    }
+</style>

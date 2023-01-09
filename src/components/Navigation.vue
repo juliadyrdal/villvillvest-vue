@@ -110,8 +110,8 @@ export default {
                             "title": "Kontakt oss"
                         },
                         {
-                            "link": "LedigStilling",
-                            "title": "Ledig stilling"
+                            "link": "ArtistPamelding",
+                            "title": "Artistpåmelding 2023"
                         }
                     ] 
                 }
