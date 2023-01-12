@@ -17,7 +17,6 @@
                 <li>Festivalpass: <span>890,-</span></li>
                 <li>Studentpass: <span>749,-</span></li>
                 <template #usp>
-                    <span class="color-accent u-bold">Juletilbud</span>
                     <span class="color-accent u-bold">50% på festivalpass</span>
                 </template>
             </TicketCard>
@@ -26,7 +25,7 @@
                 <li>Dagspass torsdag: <span>349,-</span></li>
                 <li>Dagspass fredag eller lørdag: <span>399,-</span></li>
                 <template #usp>
-                    <span>Gir tilgang til alle festivalens 26 konserter for den valgte dagen</span>
+                    <span>Gir tilgang til alle festivalens konserter for den valgte dagen</span>
                 </template>
 
             </TicketCard>
