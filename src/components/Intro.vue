@@ -2,10 +2,10 @@
     <section>
         <!-- <HeadingMain :title="title"/> -->
         <HeadingMain>
-            Vill Vill Vest 2022
+            Vill Vill Vest 2023
         </HeadingMain>
         <Paragraph>
-            Vi inviterer deg til å ta del i den syvende utgaven av Vill Vill Vest. 1.- 3. september skal 60 av de beste og mest interessante nye norske artistene spille på musikalske strenger og hjertestrenger på Bergens kjente og kjære scener. Sikre deg din billett nå.
+            Vi inviterer deg til å ta del i den åttende utgaven av Vill Vill Vest. 9.- 11. November skal 60 av de beste og mest interessante nye norske artistene spille på musikalske strenger og hjertestrenger på Bergens kjente og kjære scener. Sikre deg din billett nå.
         </Paragraph>
     </section>
 </template>

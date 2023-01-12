@@ -2,7 +2,7 @@
     <section>
         <HeadingSection :title="title" />
         <Paragraph>
-            Hvert år kommer noen av de beste og mest talentfulle artistene til Vill Vill Vest. Klikk deg inn og finn en ny favoritt! Vi oppdaterer fortløpende med nye artister frem mot festivalen.
+            Hvert år kommer noen av de beste og mest talentfulle artistene til Vill Vill Vest. Under finner du noen godbiter fra fjorårets lineup. Klikk deg inn og finn en ny favoritt!
         </Paragraph>
         <!-- Refactor if directive statement -->
         <!-- Refactor: should be carousel? -->
@@ -30,7 +30,7 @@ export default {
             random1: null,
             random2: null,
             random3: null,
-            title: "Artistslipp"
+            title: "Lineup 2022"
 
         }
     },
