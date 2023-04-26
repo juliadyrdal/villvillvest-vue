@@ -17,7 +17,7 @@
                 <li>Festivalpass: <span>890,-</span></li>
                 <li>Studentpass: <span>749,-</span></li>
                 <template #usp>
-                    <span class="color-accent u-bold">50% på festivalpass</span>
+                    <span class="color-accent u-bold">Gir tilgang til alle festivalens konserter</span>
                 </template>
             </TicketCard>
 
