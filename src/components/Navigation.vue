@@ -74,7 +74,7 @@ export default {
                     "links": [
                         {
                             "link": "Artists",
-                            "title": "Lineup 2022"
+                            "title": "Lineup 2023"
                         },
                         {
                             "link": "ArtistsSchedule",
