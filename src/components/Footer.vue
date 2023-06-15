@@ -37,8 +37,8 @@
         </ul>
         <hr>
         <ul class="Footer__links">
-            <li><router-link to="">Personvernerklæring</router-link></li>
-            <li><router-link to="">Samarbeidspartnere</router-link></li>
+            <li><router-link :to="{ name: 'Personvern' }">Personvernerklæring</router-link></li>
+            <li><router-link :to="{ name: item.link }">Samarbeidspartnere</router-link></li>
             <li><a href="#" target="_blank">Levert av: StudioKode</a></li>
         </ul>
     </footer>

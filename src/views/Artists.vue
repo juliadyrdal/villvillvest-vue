@@ -1,12 +1,12 @@
 <template>
     <section>
         <HeadingMain>
-            Artister 2022
+            Artister 2023
         </HeadingMain>
         <Paragraph>
-            Hvert år kommer noen av de beste og mest talentfulle artistene til Vill Vill Vest. Klikk deg inn og finn en ny favoritt! Vi oppdaterer fortløpende med nye artister frem mot festivalen.
+            Hvert år kommer noen av de beste og mest talentfulle artistene til Vill Vill Vest. Artistene slippes i bolker fra juni 2023. Klikk deg inn og finn en ny favoritt fra årets lineup!
         </Paragraph>
-        <EventGrid :artists="artists" />
+        <!-- <EventGrid :artists="artists" /> -->
     </section>
 </template>
 
