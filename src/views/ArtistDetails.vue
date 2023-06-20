@@ -6,7 +6,7 @@
 
         <article class="artistDetails__media">
             <figure>
-                <img :src="artist.lineup_image[500]" alt="artist.name">
+                <img :src="artist.lineup_image[960]" alt="artist.name">
                 <!-- Placeholder for photo credit, create custom field in appmiral -->
                 <!-- <figcaption>Photo cred placeholder</figcaption> -->
             </figure>
@@ -14,9 +14,10 @@
             <div class="artistDetails__bio">
                 <article v-html="artist.biography"></article>
                 <ul>
-                    <li v-if="artist.links.website"><router-link to=""><img src="../assets/icons/instagram.svg" alt=""></router-link></li>
-                    <li v-if="artist.links.facebook_page_id"><router-link to=""><img src="../assets/icons/facebook.svg" alt=""></router-link></li>
-                    <li v-if="artist.links.youtube_channel_id"><router-link to=""><img src="../assets/icons/youtube.svg" alt=""></router-link></li>
+                    <li v-if="artist.links.instagram_user"><a v-bind:href="instagramUrl + artist.links.instagram_user" target="_blank"><img src="../assets/icons/instagram.svg" alt=""></a></li>
+                    <li v-if="artist.links.facebook_page_id"><a v-bind:href="facebookUrl + artist.links.facebook_page_id" target="_blank"><img src="../assets/icons/facebook.svg" alt=""></a></li>
+                    <li v-if="artist.links.youtube_channel_id"><a v-bind:href="youtubeUrl + artist.links.youtube_channel_id" target="_blank"><img src="../assets/icons/youtube.svg" alt=""></a></li>
+                    <li v-if="artist.links.tiktok_user"><a v-bind:href="tiktokUrl + artist.links.tiktok_user" target="_blank"><img src="../assets/icons/tiktok.svg" alt=""></a></li>
                 </ul>
             </div>
 
@@ -45,6 +46,10 @@ export default {
             musicEmbed: 'https://open.spotify.com/embed/track/',
             trackUrl: null,
             spotifyTracking: '?utm_source=generator',
+            facebookUrl: 'http://www.facebook.com/',
+            instagramUrl: 'http://www.instagram.com/',
+            youtubeUrl: 'http://www.youtube.com/@',
+            tiktokUrl: 'http://www.tiktok.com/@'
         }
     },
     methods: {
