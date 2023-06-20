@@ -30,7 +30,7 @@ export default {
             random1: null,
             random2: null,
             random3: null,
-            title: "Lineup 2022"
+            title: "Lineup 2023"
 
         }
     },
@@ -47,9 +47,9 @@ export default {
         }   
     },
     created() {
-        fetch('https://app.appmiral.com/api/v6/events/villvillvest/editions/villvillvest2022/artists?child_edition=villvillvest2022festival&max_per_page=74', {
+        fetch('https://app.appmiral.com/api/v6/events/villvillvest/editions/villvillvest2021/artists?child_edition=villvillvest2021festival&max_per_page=74', {
             headers: {
-                'x-protect': process.env.VUE_APP_APPMIRAL_API_KEY_22
+                'x-protect': process.env.VUE_APP_APPMIRAL_API_KEY
             }
         })
         .then(res => res.json())
@@ -58,9 +58,9 @@ export default {
     },
     mounted() {
         // Create 3 random numbers and store in variables
-        this.random1 = this.getRandomInt(74);
-        this.random2 = this.getRandomInt(74);
-        this.random3 = this.getRandomInt(74);
+        this.random1 = this.getRandomInt(16);
+        this.random2 = this.getRandomInt(16);
+        this.random3 = this.getRandomInt(16);
     }
 }
 </script>

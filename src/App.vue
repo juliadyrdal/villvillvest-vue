@@ -1,8 +1,8 @@
 <template>
   <Header />
   <router-view/>
-  <SponsorSection />
-  <Footer />
+  <!-- <SponsorSection /> -->
+  <Footer /> 
 </template>
 
 <script>

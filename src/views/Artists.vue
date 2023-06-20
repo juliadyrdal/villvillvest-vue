@@ -6,7 +6,7 @@
         <Paragraph>
             Hvert år kommer noen av de beste og mest talentfulle artistene til Vill Vill Vest. Artistene slippes i bolker fra juni 2023. Klikk deg inn og finn en ny favoritt fra årets lineup!
         </Paragraph>
-        <!-- <EventGrid :artists="artists" /> -->
+        <EventGrid :artists="artists" />
     </section>
 </template>
 
@@ -29,14 +29,14 @@ export default {
     },
     mounted() {
         axios
-        .get('https://app.appmiral.com/api/v6/events/villvillvest/editions/villvillvest2022/artists?child_edition=villvillvest2022festival&max_per_page=74', {
+        .get('https://app.appmiral.com/api/v6/events/villvillvest/editions/villvillvest2021/artists?child_edition=villvillvest2021festival&max_per_page=74', {
             headers: {
-            'x-protect': process.env.VUE_APP_APPMIRAL_API_KEY_22
+            'x-protect': process.env.VUE_APP_APPMIRAL_API_KEY
         }
         })
       .then(response => (this.artists = response.data.data))
 
-      //console.log(this.artists.data)
+      //console.log(this.artists)
     }
 }
 </script>

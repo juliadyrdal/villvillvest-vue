@@ -1,23 +1,23 @@
 <template>
     <footer class="page-width">
-        <div class="Footer__form">
+        <!-- <div class="Footer__form">
             <h2>Subscribe to our newsletter</h2>
-            <form action="/my-handling-form-page" method="post">
+            <form action="/my-handling-form-page" method="post"> -->
                 <!-- Refactor: Add label for screen reader -->
-                <div class="border-bottom"><input class="footer__input" v-model="message" type="email" id="email" name="subscriber_email" placeholder="Email address" /></div>
+               <!-- <div class="border-bottom"><input class="footer__input" v-model="message" type="email" id="email" name="subscriber_email" placeholder="Email address" /></div>
                 <button type="submit">Sign up</button>
             </form>
-        </div>
+        </div> -->
         <div class="Footer__social">
-            <router-link to="https://www.instagram.com/villvillvest">
+            <a href="https://www.instagram.com/villvillvest" target="_blank">
                 <img src="../assets/icons/instagram.svg" alt="Vill Vill Vest Instagram">
-            </router-link>
-            <router-link to="https://www.facebook.com/701999263235784">
+            </a>
+            <a href="https://www.facebook.com/701999263235784" target="_blank">
                 <img src="../assets/icons/facebook.svg" alt="Vill Vill Vest Facebook">
-            </router-link>
-            <router-link to="https://www.youtube.com/channel/UCbXfGYyZiD6rux0bGge26UA">
+            </a>
+            <a href="https://www.youtube.com/channel/UCbXfGYyZiD6rux0bGge26UA" target="_blank">
                 <img src="../assets/icons/youtube.svg" alt="Vill Vill Vest Youtube">
-            </router-link>
+            </a>
         </div>
         <ul class="Footer__contact">
             <li>
@@ -36,11 +36,11 @@
             </li>
         </ul>
         <hr>
-        <ul class="Footer__links">
+        <!-- <ul class="Footer__links">
             <li><router-link :to="{ name: 'Personvern' }">Personvernerklæring</router-link></li>
             <li><router-link :to="{ name: item.link }">Samarbeidspartnere</router-link></li>
             <li><a href="#" target="_blank">Levert av: StudioKode</a></li>
-        </ul>
+        </ul> -->
     </footer>
 </template>
 
