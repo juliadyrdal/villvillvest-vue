@@ -76,10 +76,10 @@ export default {
                             "link": "Artists",
                             "title": "Lineup 2023"
                         },
-                        {
-                            "link": "ArtistsSchedule",
-                            "title": "Artistprogram",
-                        },
+                        // {
+                        //     "link": "ArtistsSchedule",
+                        //     "title": "Artistprogram",
+                        // },
                         {
                             "link": "Billetter",
                             "title": "Billetter"
