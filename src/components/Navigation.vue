@@ -112,7 +112,12 @@ export default {
                         {
                             "link": "ArtistPamelding",
                             "title": "Artistpåmelding 2023"
+                        },
+                        {
+                            "link": "English",
+                            "title": "Information in English"
                         }
+
                     ] 
                 }
             ],

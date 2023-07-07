@@ -194,6 +194,15 @@ const routes = [
     }
   },
   {
+    path: '/information-in-english',
+    name: 'English',
+    component: () => import(/* webpackChunkName: "english" */ '../views/English.vue'),
+    meta: {
+      publicRoute: true,
+      title: `Information in English ${metaTemplate}`,
+    }
+  },
+  {
     path: '/konferanse-venues',
     name: 'Venues',
     component: () => import(/* webpackChunkName: "ledig-stilling" */ '../views/Venues.vue'),
