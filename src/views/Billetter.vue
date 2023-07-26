@@ -14,7 +14,7 @@
     <section>
         <div class="ticket-grid">
             <TicketCard title="Festivalpass">
-                <li>Festivalpass: <span>890,-</span></li>
+                <li>Festivalpass: <span>990,-</span></li>
                 <li>Studentpass: <span>749,-</span></li>
                 <template #usp>
                     <span class="color-accent u-bold">Gir tilgang til alle festivalens konserter</span>
@@ -22,8 +22,8 @@
             </TicketCard>
 
             <TicketCard title="Dagspass">
-                <li>Dagspass torsdag: <span>349,-</span></li>
-                <li>Dagspass fredag eller lørdag: <span>399,-</span></li>
+                <li>Dagspass torsdag: <span>399,-</span></li>
+                <li>Dagspass fredag eller lørdag: <span>499,-</span></li>
                 <template #usp>
                     <span>Gir tilgang til alle festivalens konserter for den valgte dagen</span>
                 </template>
@@ -31,13 +31,13 @@
             </TicketCard>
 
             <TicketCard title="Delegatpass">
-                <li>Pris fra 15/06: <span>1 290,-</span></li>
-                <li>Pris fra 15/08: <span>1 490,-</span></li>
-                <li>Pris fra 15/10: <span>1 690,-</span></li>
+                <li>Pris fra 01/01: <span>990,-</span></li>
+                <li>Pris fra 20/08: <span>1 290,-</span></li>
+                <li>Pris fra 20/09: <span>1 490,-</span></li>
+                <li>Pris fra 20/10: <span>1 690,-</span></li>
                 <li>Studentpris: <span>990,-</span></li>
                 <template #usp>
-                    <span class="color-accent u-bold">Nå</span>
-                    <span class="color-accent u-bold">Early Bird pris: 990,-</span>
+                    <span class="color-accent u-bold">Gir tilgang til alle festivalens konserter og konferanseprogrammet</span>
                 </template>
             </TicketCard>
         </div>
